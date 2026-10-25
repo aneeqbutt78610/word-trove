@@ -13,7 +13,7 @@ SITE_URL = "https://word-trove.netlify.app"      # your real domain, https, no t
 EMAIL = "hello@wordtrove.app"
 OWNER = "WordTrove editorial team"      # who maintains the content (shown in Markdown files)
 GSC_VERIFY = "5lh5U4vN7c49gHNKccb-U83lNsyciPI-t-EHPENubko"   # Google Search Console HTML-tag token (home page only)
-GA4_ID = ""          # e.g. "G-XXXXXXX" once you create a GA4 property
+GA4_ID = "G-ZKTGZ6ZKS4"   # GA4 measurement ID; "" removes the tag, its CSP entries and the privacy-policy section
 ADS_HEAD = ""        # paste your ad network <script> tag here when approved (AdSense, Ezoic, Publift...)
 WEBFONTS = True      # False = no Google Fonts request at all (system fonts only, zero third parties)
 SUITE = os.environ.get("SEO_SUITE", "")   # path to the SEO suite checkout; empty = skip the Markdown layer
@@ -61,7 +61,9 @@ def csp():
     scripts = ["'self'", sha(THEME_JS)] + ([sha(GA_JS), "https://www.googletagmanager.com"] if GA4_ID else [])
     styles = ["'self'", "'unsafe-inline'"] + (["https://fonts.googleapis.com"] if WEBFONTS else [])
     fonts = ["'self'"] + (["https://fonts.gstatic.com"] if WEBFONTS else [])
-    connect = ["'self'"] + (["https://www.google-analytics.com"] if GA4_ID else [])
+    # Google's documented GA4 CSP: hits go to regional *.google-analytics.com / *.analytics.google.com hosts
+    connect = ["'self'"] + (["https://*.google-analytics.com", "https://*.analytics.google.com", "https://*.googletagmanager.com"] if GA4_ID else [])
+    imgs = ["'self'", "data:"] + (["https://*.google-analytics.com", "https://*.googletagmanager.com"] if GA4_ID else [])
     # 'unsafe-inline' in style-src covers the style="--i:N" tile-stagger attributes only;
     # no inline <style> blocks are emitted. Inline *scripts* are hash-pinned, not unsafe-inline.
     return "; ".join([
@@ -70,7 +72,7 @@ def csp():
         "style-src " + " ".join(styles),
         "font-src " + " ".join(fonts),
         "connect-src " + " ".join(connect),
-        "img-src 'self' data:",
+        "img-src " + " ".join(imgs),
         "base-uri 'none'",        # stops an injected <base> from re-pointing every relative URL
         "object-src 'none'",
         "frame-ancestors 'none'", # clickjacking
@@ -241,7 +243,7 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" referrerpolicy="no-referrer" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Unbounded:wght@600;800&display=swap">""" if WEBFONTS else "")
     gsc = f'\n<meta name="google-site-verification" content="{esc(GSC_VERIFY)}" />' if GSC_VERIFY and slug == "" else ""
-    head = f"""<title>{esc(title)}</title>
+    head = f"""{ga}<title>{esc(title)}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canon(slug)}">
@@ -255,7 +257,7 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
 <meta name="referrer" content="strict-origin-when-cross-origin">{fonts}
 <link rel="stylesheet" href="{asset('style.css')}">{pre}
 <script>{THEME_JS}</script>
-{ga}{ADS_HEAD}{lds}"""
+{ADS_HEAD}{lds}"""
     nav_l = "".join(f'<a href="{u(finder_slug(n))}" data-k="{finder_slug(n) or "home"}">{n}</a>' for n in LENGTHS)
     foot_az = "".join(f'<a href="{u(start_slug(5,c))}">{c.upper()}</a>' for c in ABC if has_start(5, c))
     content = f"""<a class="skip" href="#main">Skip to content</a>

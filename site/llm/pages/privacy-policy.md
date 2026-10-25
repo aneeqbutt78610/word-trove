@@ -30,7 +30,7 @@ We don't offer accounts and don't ask for personal details. Your searches, unscr
 
 ## Analytics
 
-We run no analytics. We do not use cookies, we set no tracking identifiers, and we do not profile visitors.
+We use Google Analytics 4 to understand how visitors use the site, such as pages visited, device type and approximate location. Google may use cookies for this and receives your IP address. See [Google's Privacy Policy](https://policies.google.com/privacy).
 
 ## Advertising
 
@@ -46,7 +46,7 @@ We store your theme choice and your daily puzzle progress, streak and stats in y
 
 ## Your rights
 
-Depending on where you live (for example under GDPR or CCPA), you may have the right to access, correct or delete personal data, and to opt out of the sale or sharing of your information. We do not sell or share personal information. To exercise any of these rights, email us at hello@wordtrove.app.
+Depending on where you live (for example under GDPR or CCPA), you may have the right to access, correct or delete personal data, and to opt out of the sale or sharing of your information. We do not sell or share personal information. Use the consent controls in your browser or ad settings linked above, or email us at hello@wordtrove.app.
 
 ## Children
 
