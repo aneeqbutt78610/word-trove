@@ -1,1 +1,2 @@
 # Paste the lines your ad network gives you here (required for AdSense, Ezoic, Publift).
+google.com, pub-1126177067663911, DIRECT, f08c47fec0942fa0

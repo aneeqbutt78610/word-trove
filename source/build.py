@@ -14,6 +14,7 @@ EMAIL = "hello@wordtrove.app"
 OWNER = "WordTrove editorial team"      # who maintains the content (shown in Markdown files)
 GSC_VERIFY = "5lh5U4vN7c49gHNKccb-U83lNsyciPI-t-EHPENubko"   # Google Search Console HTML-tag token (home page only)
 GA4_ID = "G-ZKTGZ6ZKS4"   # GA4 measurement ID; "" removes the tag, its CSP entries and the privacy-policy section
+ADSENSE_ID = "ca-pub-1126177067663911"   # AdSense publisher ID: site-ownership meta on every page + ads.txt line. Serves no ads by itself
 GTM_ID = "GTM-N4GB3SKT"   # Google Tag Manager container; "" removes it. Loads after the consent default in GA_JS
 ADS_HEAD = ""        # paste your ad network <script> tag here when approved (AdSense, Ezoic, Publift...)
 WEBFONTS = True      # False = no Google Fonts request at all (system fonts only, zero third parties)
@@ -260,6 +261,7 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" referrerpolicy="no-referrer" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Unbounded:wght@600;800&display=swap">""" if WEBFONTS else "")
     gsc = f'\n<meta name="google-site-verification" content="{esc(GSC_VERIFY)}" />' if GSC_VERIFY and slug == "" else ""
+    gsc += f'\n<meta name="google-adsense-account" content="{esc(ADSENSE_ID)}">' if ADSENSE_ID else ""
     gtm = f"<script>{GTM_JS}</script>" if GTM_ID else ""
     gtm_ns = (f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={esc(GTM_ID)}" height="0" width="0" '
               f'style="display:none;visibility:hidden"></iframe></noscript>\n') if GTM_ID else ""
@@ -919,7 +921,8 @@ def main():
         open(os.path.join(OUT, "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
             xml_hint + "".join(f"<url><loc>{x}</loc><lastmod>{TODAY}</lastmod></url>\n" for x in SITEMAP) + "</urlset>\n")
         open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n" + robots_hint)
-        open(os.path.join(OUT, "ads.txt"), "w").write("# Paste the lines your ad network gives you here (required for AdSense, Ezoic, Publift).\n")
+        open(os.path.join(OUT, "ads.txt"), "w").write("# Paste the lines your ad network gives you here (required for AdSense, Ezoic, Publift).\n" +
+            (f"google.com, {ADSENSE_ID.removeprefix('ca-')}, DIRECT, f08c47fec0942fa0\n" if ADSENSE_ID else ""))
         hdr = open(os.path.join(ROOT, "src", "_headers"), encoding="utf-8").read()
         hdr += f"""
 /*
