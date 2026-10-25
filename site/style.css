@@ -126,7 +126,6 @@ a.az:hover{background:var(--hit);color:#fff;transform:translateY(-2px)}
 .faq details p{margin:.5em 0 0}
 .mail{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.sel{user-select:all}
 
-.ad{display:none}  /* ads: give slots a min-height when you turn them on to avoid layout shift, e.g. .ad{display:block;min-height:100px;margin:20px 0} */
 
 /* footer */
 .foot{margin-top:56px;border-top:1px solid var(--line);background:var(--surface);padding-block:30px 24px}
