@@ -59,6 +59,10 @@ We use Google Analytics 4 with Google Consent Mode. Until you click **Accept**, 
 
 Google processes this data on our behalf. See [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites).
 
+## Google Tag Manager
+
+We use Google Tag Manager to manage the measurement tags on this site. Tag Manager itself sets no cookies, but loading it means Google receives your IP address and browser details. Every tag it runs follows your cookie choice: nothing that needs consent fires until you click **Accept**.
+
 ## Advertising
 
 We show no ads, set no advertising cookies and do not share data for targeted advertising.
@@ -72,7 +76,7 @@ Page text is set in webfonts served by Google Fonts. Your browser requests those
 We don't sell, rent or trade personal data. We disclose it only to the service providers below, who process it for the purposes in this policy, or when the law requires it.
 
 - **Netlify, Inc.** (United States) hosts the site. [Netlify privacy policy](https://www.netlify.com/privacy/)
-- **Google LLC** (United States) provides Google Analytics and Google Fonts. [Google privacy policy](https://policies.google.com/privacy)
+- **Google LLC** (United States) provides Google Analytics, Google Tag Manager and Google Fonts. [Google privacy policy](https://policies.google.com/privacy)
 
 ## International transfers
 

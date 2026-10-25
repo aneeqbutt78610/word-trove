@@ -14,6 +14,7 @@ EMAIL = "hello@wordtrove.app"
 OWNER = "WordTrove editorial team"      # who maintains the content (shown in Markdown files)
 GSC_VERIFY = "5lh5U4vN7c49gHNKccb-U83lNsyciPI-t-EHPENubko"   # Google Search Console HTML-tag token (home page only)
 GA4_ID = "G-ZKTGZ6ZKS4"   # GA4 measurement ID; "" removes the tag, its CSP entries and the privacy-policy section
+GTM_ID = "GTM-N4GB3SKT"   # Google Tag Manager container; "" removes it. Loads after the consent default in GA_JS
 ADS_HEAD = ""        # paste your ad network <script> tag here when approved (AdSense, Ezoic, Publift...)
 WEBFONTS = True      # False = no Google Fonts request at all (system fonts only, zero third parties)
 SUITE = os.environ.get("SEO_SUITE", "")   # path to the SEO suite checkout; empty = skip the Markdown layer
@@ -59,13 +60,21 @@ GA_JS = (f"window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push
          f"ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});"
          f"gtag('set','ads_data_redaction',true);"
          f"gtag('js',new Date());gtag('config','{GA4_ID}');") if GA4_ID else ""
+# Google's container snippet, minified. It shares dataLayer with GA_JS and comes after it, so every
+# tag fired from the container sees the consent default. Tags added in GTM still need CSP entries.
+GTM_JS = ("(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});"
+          "var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;"
+          "j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})"
+          f"(window,document,'script','dataLayer','{GTM_ID}');") if GTM_ID else ""
 
 def sha(s):
     return "'sha256-" + base64.b64encode(hashlib.sha256(s.encode()).digest()).decode() + "'"
 
 def csp():
     """Content-Security-Policy matching exactly what this build emits."""
-    scripts = ["'self'", sha(THEME_JS)] + ([sha(GA_JS), "https://www.googletagmanager.com"] if GA4_ID else [])
+    scripts = (["'self'", sha(THEME_JS)] + ([sha(GA_JS)] if GA4_ID else []) + ([sha(GTM_JS)] if GTM_ID else [])
+               + (["https://www.googletagmanager.com"] if GA4_ID or GTM_ID else []))
+    frames = ["https://www.googletagmanager.com"] if GTM_ID else []   # GTM's <noscript> iframe
     styles = ["'self'", "'unsafe-inline'"] + (["https://fonts.googleapis.com"] if WEBFONTS else [])
     fonts = ["'self'"] + (["https://fonts.gstatic.com"] if WEBFONTS else [])
     # Google's documented GA4 CSP: hits go to regional *.google-analytics.com / *.analytics.google.com hosts
@@ -80,7 +89,8 @@ def csp():
         "font-src " + " ".join(fonts),
         "connect-src " + " ".join(connect),
         "img-src " + " ".join(imgs),
-        "base-uri 'none'",        # stops an injected <base> from re-pointing every relative URL
+        *(["frame-src " + " ".join(frames)] if frames else []),
+        "base-uri 'none'",       # stops an injected <base> from re-pointing every relative URL
         "object-src 'none'",
         "frame-ancestors 'none'", # clickjacking
         "form-action 'none'",     # the site has no forms; block exfiltration via injected ones
@@ -250,7 +260,10 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" referrerpolicy="no-referrer" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Unbounded:wght@600;800&display=swap">""" if WEBFONTS else "")
     gsc = f'\n<meta name="google-site-verification" content="{esc(GSC_VERIFY)}" />' if GSC_VERIFY and slug == "" else ""
-    head = f"""{ga}<title>{esc(title)}</title>
+    gtm = f"<script>{GTM_JS}</script>" if GTM_ID else ""
+    gtm_ns = (f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={esc(GTM_ID)}" height="0" width="0" '
+              f'style="display:none;visibility:hidden"></iframe></noscript>\n') if GTM_ID else ""
+    head = f"""{ga}{gtm}<title>{esc(title)}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canon(slug)}">
@@ -268,7 +281,7 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
     nav_l = "".join(f'<a href="{u(finder_slug(n))}" data-k="{finder_slug(n) or "home"}">{n}</a>' for n in LENGTHS)
     cookie_btn = '<button class="fl" type="button" data-cc-open>Cookie settings</button>' if GA4_ID else ""
     foot_az = "".join(f'<a href="{u(start_slug(5,c))}">{c.upper()}</a>' for c in ABC if has_start(5, c))
-    content = f"""<a class="skip" href="#main">Skip to content</a>
+    content = f"""{gtm_ns}<a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap bar">
 <a class="logo" href="{u()}" aria-label="{SITE_NAME} home"><img class="lt" src="{asset('logo-mark.png')}" width="38" height="34" alt=""><span>Word<em>Trove</em></span></a>
 <nav class="nav" aria-label="Main"><span class="nl">Letters</span>{nav_l}<a href="{u('word-unscrambler')}" data-k="word-unscrambler">Unscramble</a><a href="{u('daily-word-puzzle')}" data-k="daily-word-puzzle" class="daily-link">Daily<span class="dot" hidden></span></a><a href="{u('word-lists')}" data-k="word-lists">Lists</a></nav>
@@ -603,7 +616,9 @@ def privacy_md():
     can be re-rendered on its own."""
     ga, ads, fonts = bool(GA4_ID), bool(ADS_HEAD), WEBFONTS
     ga_cookie = "_ga_" + GA4_ID.removeprefix("G-")
-    google_uses = (["Google Analytics"] if ga else []) + (["Google Fonts"] if fonts else []) + (["advertising"] if ads else [])
+    gtm = bool(GTM_ID)
+    google_uses = ((["Google Analytics"] if ga else []) + (["Google Tag Manager"] if gtm else [])
+                   + (["Google Fonts"] if fonts else []) + (["advertising"] if ads else []))
     L = lambda *parts: "\n".join(p for p in parts if p)   # join lines, dropping disabled ones
 
     summary = L(
@@ -637,6 +652,12 @@ def privacy_md():
 We use Google Analytics 4 with Google Consent Mode. Until you click **Accept**, no analytics cookies are set and Google receives only cookieless signals without identifiers, which it uses to estimate overall traffic. After you accept, Google Analytics sets the cookies listed above and records the pages you view, your device and browser type, approximate location and the site that referred you. Google Analytics 4 does not log or store IP addresses. We have not enabled Google signals or advertising features, so this data is not used for ads. We keep analytics data for no longer than 14 months.
 
 Google processes this data on our behalf. See [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites).""" if ga else ""
+    if gtm:
+        analytics += """
+
+## Google Tag Manager
+
+We use Google Tag Manager to manage the measurement tags on this site. Tag Manager itself sets no cookies, but loading it means Google receives your IP address and browser details. Every tag it runs follows your cookie choice: nothing that needs consent fires until you click **Accept**."""
 
     advertising = """
 ## Advertising
@@ -653,7 +674,7 @@ Page text is set in webfonts served by Google Fonts. Your browser requests those
 
     providers = L(
         "- **Netlify, Inc.** (United States) hosts the site. [Netlify privacy policy](https://www.netlify.com/privacy/)",
-        f"- **Google LLC** (United States) provides {' and '.join(google_uses)}. [Google privacy policy](https://policies.google.com/privacy)" if google_uses else "")
+        f"- **Google LLC** (United States) provides {', '.join(google_uses[:-1]) + ' and ' + google_uses[-1] if len(google_uses) > 1 else google_uses[0]}. [Google privacy policy](https://policies.google.com/privacy)" if google_uses else "")
 
     gpc = """
 ## Global Privacy Control and Do Not Track
@@ -736,7 +757,7 @@ The site is for a general audience and is not directed at children. We don't kno
 
 ## Security
 
-The site is served only over HTTPS, uses a strict Content Security Policy and loads scripts only from its own domain{" and Google" if ga or ads else ""}. No system is perfectly secure, but we collect as little as possible so there is little to protect.
+The site is served only over HTTPS, uses a strict Content Security Policy and loads scripts only from its own domain{" and Google" if ga or ads or gtm else ""}. No system is perfectly secure, but we collect as little as possible so there is little to protect.
 
 ## Changes
 
