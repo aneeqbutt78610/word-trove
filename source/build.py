@@ -767,7 +767,8 @@ def main():
         open(os.path.join(OUT, "data", f"{n}.txt"), "w").write(" ".join(WORDS[n]))
     open(os.path.join(OUT, "data", "daily.txt"), "w").write(" ".join(ANSWERS))
     for f in ("style.css", "app.js", "favicon.ico", "favicon-16x16.png", "favicon-32x32.png", "apple-touch-icon.png",
-              "icon-192.png", "icon-512.png", "logo.png", "logo-mark.png", "site.webmanifest"):
+              "icon-192.png", "icon-512.png", "logo.png", "logo-mark.png", "site.webmanifest",
+              "google2daa8c1ff52bce85.html"):   # Search Console ownership file, must stay at the site root
         shutil.copy(os.path.join(ROOT, "src", f), OUT)
     for n in LENGTHS:
         finder_page(n)
