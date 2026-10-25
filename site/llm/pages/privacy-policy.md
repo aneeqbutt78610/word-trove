@@ -19,7 +19,7 @@ Effective 2026-10-25. This policy explains what personal data WordTrove ("we", "
 ## Summary
 
 - No accounts, no sign-up, and nothing you type into the word tools ever leaves your browser.
-- Google Analytics and personalised ads run only if you click **Accept** in the cookie banner. Change your mind any time with **Cookie settings** at the bottom of every page.
+- Google Analytics and personalised ads run only if you click **Accept** in the cookie banner. Change your mind any time with [Cookie settings](https://word-trove.netlify.app/privacy-policy/#cookie-settings).
 - Ads are shown by Google AdSense. Without your consent they are non-personalised.
 - We do not sell your personal information.
 - We honor Global Privacy Control and Do Not Track signals.
@@ -55,7 +55,7 @@ Strictly necessary storage is used without asking because it only does what you 
 | theme | Local storage | WordTrove | Remembers light or dark mode | Until you clear site data | No, strictly necessary |
 | wt-day, wt-stats | Local storage | WordTrove | Saves daily puzzle progress, streak and stats | Until you clear site data | No, strictly necessary |
 
-Local storage stays on your device and we cannot read it. To change your choice, use **Cookie settings** at the bottom of any page. If you withdraw consent, we delete the Google Analytics and AdSense cookies set on this site from your browser. You can also block or delete cookies and site data in your browser settings.
+Local storage stays on your device and we cannot read it. To change your choice, use [Cookie settings](https://word-trove.netlify.app/privacy-policy/#cookie-settings). If you withdraw consent, we delete the Google Analytics and AdSense cookies set on this site from your browser. You can also block or delete cookies and site data in your browser settings.
 
 ## Google Analytics
 
@@ -98,7 +98,7 @@ Our service providers are based in the United States, so your data may be proces
 
 ## Your rights
 
-Wherever you live, you can ask us what personal data we hold about you and ask us to correct it, delete it or stop using it. You can withdraw consent for analytics and personalised ads at any time with **Cookie settings**. Withdrawing doesn't affect processing that already happened. Email **hello@wordtrove.app** to make a request. We reply within 30 days, or within 45 days where US state law allows. We may ask a question to confirm the request is yours. Because we collect so little, we often hold no data linked to you, and we will tell you if so. We will never treat you differently for using your rights.
+Wherever you live, you can ask us what personal data we hold about you and ask us to correct it, delete it or stop using it. You can withdraw consent for analytics and personalised ads at any time with [Cookie settings](https://word-trove.netlify.app/privacy-policy/#cookie-settings). Withdrawing doesn't affect processing that already happened. Email **hello@wordtrove.app** to make a request. We reply within 30 days, or within 45 days where US state law allows. We may ask a question to confirm the request is yours. Because we collect so little, we often hold no data linked to you, and we will tell you if so. We will never treat you differently for using your rights.
 
 ## Europe, the UK and Switzerland
 
@@ -106,13 +106,13 @@ Under the GDPR, the UK GDPR and the Swiss FADP you have the right to access, rec
 
 ## California and other US states
 
-Under the CCPA as amended by the CPRA, and the privacy laws of states including Virginia, Colorado, Connecticut, Utah, Texas and Oregon, you have the right to know, access, correct and delete your personal information, and to opt out of its sale, its sharing for cross-context behavioral advertising, targeted advertising and profiling. We do not sell personal information for money. Personalised ads from Google may count as sharing for cross-context behavioral advertising, or as targeted advertising, under some state laws. They are shown only if you click **Accept**, and we treat a Global Privacy Control signal as an opt-out. To opt out at any time, choose **Reject** in **Cookie settings**.
+Under the CCPA as amended by the CPRA, and the privacy laws of states including Virginia, Colorado, Connecticut, Utah, Texas and Oregon, you have the right to know, access, correct and delete your personal information, and to opt out of its sale, its sharing for cross-context behavioral advertising, targeted advertising and profiling. We do not sell personal information for money. Personalised ads from Google may count as sharing for cross-context behavioral advertising, or as targeted advertising, under some state laws. They are shown only if you click **Accept**, and we treat a Global Privacy Control signal as an opt-out. To opt out at any time, choose **Reject** in [Cookie settings](https://word-trove.netlify.app/privacy-policy/#cookie-settings).
 
 In the past 12 months we collected these categories of personal information: identifiers (IP address, analytics cookie IDs, advertising cookie IDs) and internet activity (server logs, ad requests, and pages viewed if you accepted analytics), from the sources and for the purposes in the table above. We do not collect sensitive personal information. You may use an authorized agent to make a request on your behalf.
 
 ## Global Privacy Control and Do Not Track
 
-If your browser sends a Global Privacy Control (GPC) or Do Not Track signal, we treat it as a choice to opt out: Google Analytics and personalised ads stay off and we don't show the cookie banner. You can still turn them on with **Cookie settings** if you want to.
+If your browser sends a Global Privacy Control (GPC) or Do Not Track signal, we treat it as a choice to opt out: Google Analytics and personalised ads stay off and we don't show the cookie banner. You can still turn them on with [Cookie settings](https://word-trove.netlify.app/privacy-policy/#cookie-settings) if you want to.
 
 ## Other countries
 

@@ -29,12 +29,13 @@
   // The inline head script defaults every visitor to denied and applies a stored accept before
   // gtag loads; this asks, records the choice for a year and updates consent live. No gtag
   // (GA4_ID unset) means no banner. GPC / Do Not Track count as "reject" and skip the banner.
-  // When the build has ads on, the footer button carries data-cc-ads and one choice covers both.
+  // When the build has ads on, <main> carries data-ads and one choice covers both. Links to
+  // #cookie-settings (in the privacy policy) reopen the banner so consent can be withdrawn.
   if (window.gtag) {
     const CK = 'wt-consent', YEAR = 31536e6;
     const saved = (() => { try { const c = JSON.parse(localStorage.getItem(CK)); return c && Date.now() - c.t < YEAR ? c : null } catch (e) { return null } })();
     const optOut = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
-    const ads = !!$('[data-cc-ads]');
+    const ads = $('main').hasAttribute('data-ads');
     const policy = $('.foot a[href*="privacy-policy"]');
     // first-party cookies only: Google's doubleclick.net cookies can't be removed from this domain
     const dropCookies = () => document.cookie.split(';').map(c => c.split('=')[0].trim()).filter(n => /^(_ga|__gads|__gpi|__eoi)/.test(n)).forEach(n =>
@@ -61,8 +62,13 @@
       box.hidden = false;
       if (focus) box.querySelector('button').focus();   // opened from the footer: move focus to the choice
     };
-    if (!saved && !optOut) ask(false);
-    $$('[data-cc-open]').forEach(b => { b.onclick = () => ask(true) });
+    const SETTINGS = '#cookie-settings';
+    if (location.hash === SETTINGS) ask(true);
+    else if (!saved && !optOut) ask(false);
+    document.addEventListener('click', e => {
+      const a = e.target.closest(`a[href$="${SETTINGS}"]`);
+      if (a && a.pathname === location.pathname) { e.preventDefault(); ask(true) }   // same page: no reload needed
+    });
   }
 
   // ---------- ads ----------
@@ -82,6 +88,9 @@
     const n = +finder.dataset.len, boxes = $$('.box'), inc = $('#inc'), exc = $('#exc');
     const out = $('#out'), more = $('#more'), count = $('#count'), sort = $('#sort'), title = $('#rtitle');
     let list = [], shown = 0;
+    // consume the <link rel=preload> right away (load() memoizes), so the first keystroke is instant
+    // and the browser doesn't flag the preload as unused
+    load(finder.dataset.src).catch(() => {});
 
     const draw = () => {
       const next = list.slice(shown, shown + PAGE);

@@ -134,8 +134,6 @@ a.az:hover{background:var(--hit);color:#fff;transform:translateY(-2px)}
 @media (max-width:700px){.fcols{grid-template-columns:1fr}}
 .fcols a{display:block;color:var(--ink);text-decoration:none;padding:3px 0;font-size:.95rem}
 .fcols a:hover{color:var(--accent)}
-.fl{display:block;background:none;border:0;padding:3px 0;font:inherit;font-size:.95rem;color:var(--ink);cursor:pointer;text-align:left}
-.fl:hover{color:var(--accent)}
 
 /* ad slot: labelled, spaced off the tools above it, and collapsed when AdSense has nothing to show */
 .ad{margin:36px 0;padding-top:6px;border-top:1px solid var(--line)}

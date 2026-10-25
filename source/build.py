@@ -89,7 +89,10 @@ def csp():
         # wildcard. Ad creatives and tracking pixels come from arbitrary advertiser CDNs, hence https: for images.
         ad_hosts = ["https://*.googlesyndication.com", "https://*.doubleclick.net", "https://*.google.com", "https://*.gstatic.com",
                     "https://*.googleadservices.com", "https://*.googletagservices.com", "https://*.adtrafficquality.google"]
-        scripts += ad_hosts
+        # AdSense injects inline scripts into about:srcdoc ad frames, which inherit this policy, and their
+        # content varies, so they can't be hash-pinned (Google doesn't support hash CSPs for AdSense).
+        # Browsers ignore 'unsafe-inline' while any hash is listed, so ads-on drops the hashes.
+        scripts = ["'self'", "'unsafe-inline'"] + scripts[scripts.index("https://www.googletagmanager.com"):] + ad_hosts
         connect += ad_hosts
         frames += ad_hosts
         imgs = ["'self'", "data:", "https:"]
@@ -310,7 +313,6 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
 <script>{THEME_JS}</script>
 {"" if slug in NO_ADS else ADS_HEAD}{lds}"""
     nav_l = "".join(f'<a href="{u(finder_slug(n))}" data-k="{finder_slug(n) or "home"}">{n}</a>' for n in LENGTHS)
-    cookie_btn = f'<button class="fl" type="button" data-cc-open{" data-cc-ads" if ADS_HEAD else ""}>Cookie settings</button>' if GA4_ID else ""
     foot_az = "".join(f'<a href="{u(start_slug(5,c))}">{c.upper()}</a>' for c in ABC if has_start(5, c))
     content = f"""{gtm_ns}<a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap bar">
@@ -318,12 +320,12 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
 <nav class="nav" aria-label="Main"><span class="nl">Letters</span>{nav_l}<a href="{u('word-unscrambler')}" data-k="word-unscrambler">Unscramble</a><a href="{u('daily-word-puzzle')}" data-k="daily-word-puzzle" class="daily-link">Daily<span class="dot" hidden></span></a><a href="{u('word-lists')}" data-k="word-lists">Lists</a></nav>
 <button class="theme" id="theme" type="button" aria-label="Switch light or dark theme"><span></span></button>
 </div></header>
-<main id="main" class="wrap" data-page="{slug or 'home'}">{body}</main>
+<main id="main" class="wrap" data-page="{slug or 'home'}"{" data-ads" if ADS_HEAD else ""}>{body}</main>
 <footer class="foot"><div class="wrap">
 <div class="fcols">
 <div><p class="fh">Word finders</p>{''.join(f'<a href="{u(finder_slug(n))}">{n} letter word finder</a>' for n in LENGTHS)}<a href="{u('word-unscrambler')}">Word unscrambler</a><a href="{u('daily-word-puzzle')}">Daily word puzzle</a></div>
 <div><p class="fh">5 letter words starting with</p><div class="fz">{foot_az}</div><a href="{u('word-lists')}">All word lists →</a></div>
-<div><p class="fh">{SITE_NAME}</p><a href="{u('about')}">About</a><a href="{u('how-our-word-list-works')}">How our word list works</a><a href="{u('contact')}">Contact</a><a href="{u('privacy-policy')}">Privacy policy</a><a href="{u('terms')}">Terms of use</a>{cookie_btn}</div>
+<div><p class="fh">{SITE_NAME}</p><a href="{u('about')}">About</a><a href="{u('how-our-word-list-works')}">How our word list works</a><a href="{u('contact')}">Contact</a><a href="{u('privacy-policy')}">Privacy policy</a><a href="{u('terms')}">Terms of use</a></div>
 </div>
 <p class="copy">© {date.today().year} {SITE_NAME}. Independent word finder for Wordle, Scrabble and every word game. Not affiliated with The New York Times, Hasbro or Mattel.</p>
 </div></footer>
@@ -655,7 +657,7 @@ def privacy_md():
 
     summary = L(
         "- No accounts, no sign-up, and nothing you type into the word tools ever leaves your browser.",
-        f"- {tracked} run only if you click **Accept** in the cookie banner. Change your mind any time with **Cookie settings** at the bottom of every page." if ga else
+        f"- {tracked} run only if you click **Accept** in the cookie banner. Change your mind any time with [Cookie settings]({SITE_URL}/privacy-policy/#cookie-settings)." if ga else
         "- We run no analytics and set no tracking cookies.",
         "- Ads are shown by Google AdSense. Without your consent they are non-personalised." if ads else "",
         "- We do not sell your personal information." if ads else
@@ -718,10 +720,10 @@ Page text is set in webfonts served by Google Fonts. Your browser requests those
     gpc = """
 ## Global Privacy Control and Do Not Track
 
-If your browser sends a Global Privacy Control (GPC) or Do Not Track signal, we treat it as a choice to opt out: {tracked} stay off and we don't show the cookie banner. You can still turn them on with **Cookie settings** if you want to.""" if ga else ""
-    gpc = gpc.replace("{tracked}", tracked)
+If your browser sends a Global Privacy Control (GPC) or Do Not Track signal, we treat it as a choice to opt out: {tracked} stay off and we don't show the cookie banner. You can still turn them on with [Cookie settings]({SITE_URL}/privacy-policy/#cookie-settings) if you want to.""" if ga else ""
+    gpc = gpc.replace("{tracked}", tracked).replace("{SITE_URL}", SITE_URL)
 
-    us_sale = ("We do not sell personal information for money. Personalised ads from Google may count as sharing for cross-context behavioral advertising, or as targeted advertising, under some state laws. They are shown only if you click **Accept**, and we treat a Global Privacy Control signal as an opt-out. To opt out at any time, choose **Reject** in **Cookie settings**."
+    us_sale = (f"We do not sell personal information for money. Personalised ads from Google may count as sharing for cross-context behavioral advertising, or as targeted advertising, under some state laws. They are shown only if you click **Accept**, and we treat a Global Privacy Control signal as an opt-out. To opt out at any time, choose **Reject** in [Cookie settings]({SITE_URL}/privacy-policy/#cookie-settings)."
                if ads else
                "**We do not sell or share personal information and do not use it for targeted advertising or profiling**, and we have not done so in the past 12 months.")
 
@@ -755,7 +757,7 @@ Strictly necessary storage is used without asking because it only does what you 
 
 {storage}
 
-Local storage stays on your device and we cannot read it. {f"To change your choice, use **Cookie settings** at the bottom of any page. If you withdraw consent, we delete the {dropped} from your browser. " if ga else ""}You can also block or delete cookies and site data in your browser settings.
+Local storage stays on your device and we cannot read it. {f"To change your choice, use [Cookie settings]({SITE_URL}/privacy-policy/#cookie-settings). If you withdraw consent, we delete the {dropped} from your browser. " if ga else ""}You can also block or delete cookies and site data in your browser settings.
 {analytics}
 {advertising}
 {thirdparty}
@@ -778,7 +780,7 @@ Our service providers are based in the United States, so your data may be proces
 
 ## Your rights
 
-Wherever you live, you can ask us what personal data we hold about you and ask us to correct it, delete it or stop using it. {f"You can withdraw {withdraw} at any time with **Cookie settings**. Withdrawing doesn't affect processing that already happened. " if ga else ""}Email **{EMAIL}** to make a request. We reply within 30 days, or within 45 days where US state law allows. We may ask a question to confirm the request is yours. Because we collect so little, we often hold no data linked to you, and we will tell you if so. We will never treat you differently for using your rights.
+Wherever you live, you can ask us what personal data we hold about you and ask us to correct it, delete it or stop using it. {f"You can withdraw {withdraw} at any time with [Cookie settings]({SITE_URL}/privacy-policy/#cookie-settings). Withdrawing doesn't affect processing that already happened. " if ga else ""}Email **{EMAIL}** to make a request. We reply within 30 days, or within 45 days where US state law allows. We may ask a question to confirm the request is yours. Because we collect so little, we often hold no data linked to you, and we will tell you if so. We will never treat you differently for using your rights.
 
 ## Europe, the UK and Switzerland
 
