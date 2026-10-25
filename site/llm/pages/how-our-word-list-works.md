@@ -1,6 +1,6 @@
 # How Our Word List Works
 
-Canonical: [How Our Word List Works](https://wordtrove.app/how-our-word-list-works/)
+Canonical: [How Our Word List Works](https://word-trove.netlify.app/how-our-word-list-works/)
 
 Locale: en
 
@@ -12,7 +12,7 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/about-site.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/about-site.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
@@ -53,4 +53,4 @@ Words are ranked by how often they appear in an English text corpus of about 50 
 - This is not the official Scrabble dictionary (NWL or Collins) or the Wordle answer list. A word we list may not be accepted by a given game, and some game words are missing.
 - Words longer than 8 letters are not included.
 
-Updated 2026-10-24. Report a missing or wrong word on the [contact page](https://wordtrove.app/contact/).
+Updated 2026-10-24. Report a missing or wrong word on the [contact page](https://word-trove.netlify.app/contact/).

@@ -1,6 +1,6 @@
 # 6 Letter Words Ending in R
 
-Canonical: [6 Letter Words Ending in R](https://wordtrove.app/6-letter-words-ending-in-r/)
+Canonical: [6 Letter Words Ending in R](https://word-trove.netlify.app/6-letter-words-ending-in-r/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 1,185 6 letter words ending in R in the WordTrove word list. The most common are EITHER, SERVER, NUMBER, VECTOR, AUTHOR. The highest scoring is BUZZER at 26 Scrabble points.
 
-Canonical list: [6 Letter Words Ending in R](https://wordtrove.app/6-letter-words-ending-in-r/)
+Canonical list: [6 Letter Words Ending in R](https://word-trove.netlify.app/6-letter-words-ending-in-r/)
 
 ## Key facts
 
@@ -145,4 +145,4 @@ EITHER, AUTHOR, APPEAR, HEADER, LINEAR, KAISER each contain several vowels, whic
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [6 letter word finder](https://wordtrove.app/6-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [6 letter word finder](https://word-trove.netlify.app/6-letter-words/).

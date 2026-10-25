@@ -9,9 +9,10 @@ from datetime import date
 
 # ---------------- CONFIG: change these, then rebuild ----------------
 SITE_NAME = "WordTrove"
-SITE_URL = "https://wordtrove.app"      # your real domain, https, no trailing slash
+SITE_URL = "https://word-trove.netlify.app"      # your real domain, https, no trailing slash
 EMAIL = "hello@wordtrove.app"
 OWNER = "WordTrove editorial team"      # who maintains the content (shown in Markdown files)
+GSC_VERIFY = "5lh5U4vN7c49gHNKccb-U83lNsyciPI-t-EHPENubko"   # Google Search Console HTML-tag token (home page only)
 GA4_ID = ""          # e.g. "G-XXXXXXX" once you create a GA4 property
 ADS_HEAD = ""        # paste your ad network <script> tag here when approved (AdSense, Ezoic, Publift...)
 WEBFONTS = True      # False = no Google Fonts request at all (system fonts only, zero third parties)
@@ -239,11 +240,12 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
     fonts = ("""
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" referrerpolicy="no-referrer" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Unbounded:wght@600;800&display=swap">""" if WEBFONTS else "")
+    gsc = f'\n<meta name="google-site-verification" content="{esc(GSC_VERIFY)}" />' if GSC_VERIFY and slug == "" else ""
     head = f"""<title>{esc(title)}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canon(slug)}">
-<meta name="robots" content="{'index,follow,max-snippet:-1' if h_index else 'noindex'}">
+<meta name="robots" content="{'index,follow,max-snippet:-1' if h_index else 'noindex'}">{gsc}
 <meta name="theme-color" content="#1b2433">
 <meta property="og:type" content="website"><meta property="og:site_name" content="{esc(SITE_NAME)}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">

@@ -1,6 +1,6 @@
 # Daily Word Puzzle
 
-Canonical: [Daily Word Puzzle](https://wordtrove.app/daily-word-puzzle/)
+Canonical: [Daily Word Puzzle](https://word-trove.netlify.app/daily-word-puzzle/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/games.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/games.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## How to play
 
 Guess the hidden 5 letter word in six tries. After each guess, green tiles are right letters in the right spot, yellow tiles are in the word but in another spot, and grey tiles are not in the word.
 
-Canonical game page: [Daily Word Puzzle](https://wordtrove.app/daily-word-puzzle/)
+Canonical game page: [Daily Word Puzzle](https://word-trove.netlify.app/daily-word-puzzle/)
 
 ## Key facts
 

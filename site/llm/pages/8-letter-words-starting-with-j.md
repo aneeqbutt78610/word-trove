@@ -1,6 +1,6 @@
 # 8 Letter Words Starting With J
 
-Canonical: [8 Letter Words Starting With J](https://wordtrove.app/8-letter-words-starting-with-j/)
+Canonical: [8 Letter Words Starting With J](https://word-trove.netlify.app/8-letter-words-starting-with-j/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 127 8 letter words starting with J in the WordTrove word list. The most common are JOHANNES, JUDGMENT, JUDICIAL, JAMBOREE, JOYSTICK. The highest scoring is JAZZIEST at 33 Scrabble points.
 
-Canonical list: [8 Letter Words Starting With J](https://wordtrove.app/8-letter-words-starting-with-j/)
+Canonical list: [8 Letter Words Starting With J](https://word-trove.netlify.app/8-letter-words-starting-with-j/)
 
 ## Key facts
 
@@ -57,4 +57,4 @@ JOHANNES, JUDICIAL, JAMBOREE, JOURNALS, JUNCTION, JABBERER each contain several 
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://wordtrove.app/8-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://word-trove.netlify.app/8-letter-words/).

@@ -1,6 +1,6 @@
 # 8 Letter Words Starting With B
 
-Canonical: [8 Letter Words Starting With B](https://wordtrove.app/8-letter-words-starting-with-b/)
+Canonical: [8 Letter Words Starting With B](https://word-trove.netlify.app/8-letter-words-starting-with-b/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 1,130 8 letter words starting with B in the WordTrove word list. The most common are BUILDING, BUSINESS, BINARIES, BEHAVIOR, BENJAMIN. The highest scoring is BUZZKILL at 32 Scrabble points.
 
-Canonical list: [8 Letter Words Starting With B](https://wordtrove.app/8-letter-words-starting-with-b/)
+Canonical list: [8 Letter Words Starting With B](https://word-trove.netlify.app/8-letter-words-starting-with-b/)
 
 ## Key facts
 
@@ -141,4 +141,4 @@ BUILDING, BUSINESS, BINARIES, BEHAVIOR, BENJAMIN, BULLSEYE each contain several 
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://wordtrove.app/8-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://word-trove.netlify.app/8-letter-words/).

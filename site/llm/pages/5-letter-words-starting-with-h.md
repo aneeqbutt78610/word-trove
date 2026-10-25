@@ -1,6 +1,6 @@
 # 5 Letter Words Starting With H
 
-Canonical: [5 Letter Words Starting With H](https://wordtrove.app/5-letter-words-starting-with-h/)
+Canonical: [5 Letter Words Starting With H](https://word-trove.netlify.app/5-letter-words-starting-with-h/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 259 5 letter words starting with H in the WordTrove word list. The most common are HELLO, HONOR, HOOKS, HUMAN, HAIKU. The highest scoring is HAJJI at 22 Scrabble points.
 
-Canonical list: [5 Letter Words Starting With H](https://wordtrove.app/5-letter-words-starting-with-h/)
+Canonical list: [5 Letter Words Starting With H](https://word-trove.netlify.app/5-letter-words-starting-with-h/)
 
 ## Key facts
 
@@ -68,4 +68,4 @@ HAIKU, HEAVE, HOUSE, HAOLE, HOOEY, HOURI each contain several vowels, which make
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://wordtrove.app/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://word-trove.netlify.app/).

@@ -1,6 +1,6 @@
 # 5 Letter Words Ending in D
 
-Canonical: [5 Letter Words Ending in D](https://wordtrove.app/5-letter-words-ending-in-d/)
+Canonical: [5 Letter Words Ending in D](https://word-trove.netlify.app/5-letter-words-ending-in-d/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 460 5 letter words ending in D in the WordTrove word list. The most common are BUILD, FOUND, AVOID, ADDED, FIXED. The highest scoring is FAZED at 18 Scrabble points.
 
-Canonical list: [5 Letter Words Ending in D](https://wordtrove.app/5-letter-words-ending-in-d/)
+Canonical list: [5 Letter Words Ending in D](https://word-trove.netlify.app/5-letter-words-ending-in-d/)
 
 ## Key facts
 
@@ -85,4 +85,4 @@ AVOID, AHEAD, AIMED, AIDED, AIRED, ALOUD each contain several vowels, which make
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://wordtrove.app/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://word-trove.netlify.app/).

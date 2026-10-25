@@ -1,6 +1,6 @@
 # 8 Letter Words Ending in N
 
-Canonical: [8 Letter Words Ending in N](https://wordtrove.app/8-letter-words-ending-in-n/)
+Canonical: [8 Letter Words Ending in N](https://word-trove.netlify.app/8-letter-words-ending-in-n/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 712 8 letter words ending in N in the WordTrove word list. The most common are FUNCTION, MAINTAIN, ADDITION, LOCATION, RELATION. The highest scoring is ZOOTOXIN at 24 Scrabble points.
 
-Canonical list: [8 Letter Words Ending in N](https://wordtrove.app/8-letter-words-ending-in-n/)
+Canonical list: [8 Letter Words Ending in N](https://word-trove.netlify.app/8-letter-words-ending-in-n/)
 
 ## Key facts
 
@@ -106,4 +106,4 @@ FUNCTION, MAINTAIN, ADDITION, LOCATION, RELATION, CREATION each contain several 
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://wordtrove.app/8-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://word-trove.netlify.app/8-letter-words/).

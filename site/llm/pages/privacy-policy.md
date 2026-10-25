@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Canonical: [Privacy Policy](https://wordtrove.app/privacy-policy/)
+Canonical: [Privacy Policy](https://word-trove.netlify.app/privacy-policy/)
 
 Locale: en
 
@@ -12,17 +12,17 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/legal.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/legal.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
-Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://wordtrove.app.
+Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://word-trove.netlify.app.
 
-Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://wordtrove.app.
+Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://word-trove.netlify.app.
 
-Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://wordtrove.app.
+Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://word-trove.netlify.app.
 
-Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://wordtrove.app.
+Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://word-trove.netlify.app.
 
-Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://wordtrove.app.
+Effective 2026-10-24. WordTrove ("we") respects your privacy. This policy explains what information is collected when you use https://word-trove.netlify.app.
 
 ## Information we collect
 

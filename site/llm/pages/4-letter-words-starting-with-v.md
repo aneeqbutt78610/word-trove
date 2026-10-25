@@ -1,6 +1,6 @@
 # 4 Letter Words Starting With V
 
-Canonical: [4 Letter Words Starting With V](https://wordtrove.app/4-letter-words-starting-with-v/)
+Canonical: [4 Letter Words Starting With V](https://word-trove.netlify.app/4-letter-words-starting-with-v/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 62 4 letter words starting with V in the WordTrove word list. The most common are VIEW, VOID, VERY, VARS, VICE. The highest scoring is VAMP at 11 Scrabble points.
 
-Canonical list: [4 Letter Words Starting With V](https://wordtrove.app/4-letter-words-starting-with-v/)
+Canonical list: [4 Letter Words Starting With V](https://word-trove.netlify.app/4-letter-words-starting-with-v/)
 
 ## Key facts
 
@@ -52,4 +52,4 @@ VIEW, VOID, VICE, VELA, VALE, VARA each contain several vowels, which makes them
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [4 letter word finder](https://wordtrove.app/4-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [4 letter word finder](https://word-trove.netlify.app/4-letter-words/).

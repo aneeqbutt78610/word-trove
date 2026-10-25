@@ -1,6 +1,6 @@
 # 8 Letter Words Ending in E
 
-Canonical: [8 Letter Words Ending in E](https://wordtrove.app/8-letter-words-ending-in-e/)
+Canonical: [8 Letter Words Ending in E](https://word-trove.netlify.app/8-letter-words-ending-in-e/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 2,035 8 letter words ending in E in the WordTrove word list. The most common are UNSTABLE, SOFTWARE, LIKEWISE, VARIABLE, OVERRIDE. The highest scoring is EMBEZZLE at 30 Scrabble points.
 
-Canonical list: [8 Letter Words Ending in E](https://wordtrove.app/8-letter-words-ending-in-e/)
+Canonical list: [8 Letter Words Ending in E](https://word-trove.netlify.app/8-letter-words-ending-in-e/)
 
 ## Key facts
 
@@ -216,4 +216,4 @@ UNSTABLE, SOFTWARE, LIKEWISE, VARIABLE, OVERRIDE, COMPLETE each contain several 
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://wordtrove.app/8-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://word-trove.netlify.app/8-letter-words/).

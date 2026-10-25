@@ -1,6 +1,6 @@
 # Word Unscrambler
 
-Canonical: [Word Unscrambler](https://wordtrove.app/word-unscrambler/)
+Canonical: [Word Unscrambler](https://word-trove.netlify.app/word-unscrambler/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-finders.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-finders.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 To unscramble letters, type them into the WordTrove word unscrambler. It lists every word from 3 to 8 letters you can spell with those letters, longest and highest scoring first. Use ? for a blank tile. For example, PLANETS makes 188 words.
 
-Canonical tool: [Word Unscrambler](https://wordtrove.app/word-unscrambler/)
+Canonical tool: [Word Unscrambler](https://word-trove.netlify.app/word-unscrambler/)
 
 ## Example: words from PLANETS
 
@@ -48,4 +48,4 @@ Up to 12 letters. Results show words from 3 to 8 letters long, longest first.
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method: [How our word list works](https://wordtrove.app/how-our-word-list-works/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/).

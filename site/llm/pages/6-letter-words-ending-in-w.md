@@ -1,6 +1,6 @@
 # 6 Letter Words Ending in W
 
-Canonical: [6 Letter Words Ending in W](https://wordtrove.app/6-letter-words-ending-in-w/)
+Canonical: [6 Letter Words Ending in W](https://word-trove.netlify.app/6-letter-words-ending-in-w/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 68 6 letter words ending in W in the WordTrove word list. The most common are FOLLOW, WINDOW, SHADOW, REVIEW, NARROW. The highest scoring is JIGSAW at 17 Scrabble points.
 
-Canonical list: [6 Letter Words Ending in W](https://wordtrove.app/6-letter-words-ending-in-w/)
+Canonical list: [6 Letter Words Ending in W](https://word-trove.netlify.app/6-letter-words-ending-in-w/)
 
 ## Key facts
 
@@ -52,4 +52,4 @@ REVIEW, ERENOW, HEEHAW, MEADOW, OUTLAW, SEESAW each contain several vowels, whic
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [6 letter word finder](https://wordtrove.app/6-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [6 letter word finder](https://word-trove.netlify.app/6-letter-words/).

@@ -1,6 +1,6 @@
 # Terms of Use
 
-Canonical: [Terms of Use](https://wordtrove.app/terms/)
+Canonical: [Terms of Use](https://word-trove.netlify.app/terms/)
 
 Locale: en
 
@@ -12,7 +12,7 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/legal.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/legal.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 By using WordTrove you agree to these terms.
 

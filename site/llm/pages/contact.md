@@ -1,6 +1,6 @@
 # Contact Us
 
-Canonical: [Contact Us](https://wordtrove.app/contact/)
+Canonical: [Contact Us](https://word-trove.netlify.app/contact/)
 
 Locale: en
 
@@ -12,7 +12,7 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/about-site.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/about-site.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## How do I contact WordTrove?
 

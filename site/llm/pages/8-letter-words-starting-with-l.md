@@ -1,6 +1,6 @@
 # 8 Letter Words Starting With L
 
-Canonical: [8 Letter Words Starting With L](https://wordtrove.app/8-letter-words-starting-with-l/)
+Canonical: [8 Letter Words Starting With L](https://word-trove.netlify.app/8-letter-words-starting-with-l/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 551 8 letter words starting with L in the WordTrove word list. The most common are LICENSES, LIKEWISE, LICENSED, LANGUAGE, LOCATION. The highest scoring is LYSOZYME at 25 Scrabble points.
 
-Canonical list: [8 Letter Words Starting With L](https://wordtrove.app/8-letter-words-starting-with-l/)
+Canonical list: [8 Letter Words Starting With L](https://word-trove.netlify.app/8-letter-words-starting-with-l/)
 
 ## Key facts
 
@@ -92,4 +92,4 @@ LICENSES, LIKEWISE, LICENSED, LANGUAGE, LOCATION, LICENSEE each contain several 
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://wordtrove.app/8-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [8 letter word finder](https://word-trove.netlify.app/8-letter-words/).

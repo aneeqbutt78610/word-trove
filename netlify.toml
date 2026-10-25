@@ -1,0 +1,4 @@
+# The site is prebuilt into site/ (build.py needs Linux + Hunspell), so Netlify only publishes it.
+[build]
+  publish = "site"
+  command = ""

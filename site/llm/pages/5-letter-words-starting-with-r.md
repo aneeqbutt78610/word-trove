@@ -1,6 +1,6 @@
 # 5 Letter Words Starting With R
 
-Canonical: [5 Letter Words Starting With R](https://wordtrove.app/5-letter-words-starting-with-r/)
+Canonical: [5 Letter Words Starting With R](https://word-trove.netlify.app/5-letter-words-starting-with-r/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 305 5 letter words starting with R in the WordTrove word list. The most common are RULES, RANGE, RIGHT, RATIO, RESET. The highest scoring is RITZY at 17 Scrabble points.
 
-Canonical list: [5 Letter Words Starting With R](https://wordtrove.app/5-letter-words-starting-with-r/)
+Canonical list: [5 Letter Words Starting With R](https://word-trove.netlify.app/5-letter-words-starting-with-r/)
 
 ## Key facts
 
@@ -72,4 +72,4 @@ RATIO, REUSE, ROUTE, RAISE, RADIO, RADII each contain several vowels, which make
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://wordtrove.app/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://word-trove.netlify.app/).

@@ -1,6 +1,6 @@
 # 5 Letter Words Starting With C
 
-Canonical: [5 Letter Words Starting With C](https://wordtrove.app/5-letter-words-starting-with-c/)
+Canonical: [5 Letter Words Starting With C](https://word-trove.netlify.app/5-letter-words-starting-with-c/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 544 5 letter words starting with C in the WordTrove word list. The most common are CHECK, CLASS, CROSS, CLAIM, CLEAN. The highest scoring is CLXIX at 21 Scrabble points.
 
-Canonical list: [5 Letter Words Starting With C](https://wordtrove.app/5-letter-words-starting-with-c/)
+Canonical list: [5 Letter Words Starting With C](https://word-trove.netlify.app/5-letter-words-starting-with-c/)
 
 ## Key facts
 
@@ -92,4 +92,4 @@ CAUSE, COCOA, CEASE, CURIE, CACAO, CAMEO each contain several vowels, which make
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://wordtrove.app/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://word-trove.netlify.app/).

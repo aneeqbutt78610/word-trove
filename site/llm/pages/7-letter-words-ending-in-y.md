@@ -1,6 +1,6 @@
 # 7 Letter Words Ending in Y
 
-Canonical: [7 Letter Words Ending in Y](https://wordtrove.app/7-letter-words-ending-in-y/)
+Canonical: [7 Letter Words Ending in Y](https://word-trove.netlify.app/7-letter-words-ending-in-y/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 1,019 7 letter words ending in Y in the WordTrove word list. The most common are URGENCY, LIBRARY, ABILITY, ALREADY, SPECIFY. The highest scoring is JAZZILY at 35 Scrabble points.
 
-Canonical list: [7 Letter Words Ending in Y](https://wordtrove.app/7-letter-words-ending-in-y/)
+Canonical list: [7 Letter Words Ending in Y](https://word-trove.netlify.app/7-letter-words-ending-in-y/)
 
 ## Key facts
 
@@ -131,4 +131,4 @@ ABILITY, ALREADY, UTILITY, OVERLAY, USUALLY, QUALIFY each contain several vowels
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [7 letter word finder](https://wordtrove.app/7-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [7 letter word finder](https://word-trove.netlify.app/7-letter-words/).

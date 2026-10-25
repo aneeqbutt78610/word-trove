@@ -1,6 +1,6 @@
 # 7 Letter Words Starting With N
 
-Canonical: [7 Letter Words Starting With N](https://wordtrove.app/7-letter-words-starting-with-n/)
+Canonical: [7 Letter Words Starting With N](https://word-trove.netlify.app/7-letter-words-starting-with-n/)
 
 Locale: en
 
@@ -12,13 +12,13 @@ Source revision: build-2026-10-24
 
 Maintenance owner: WordTrove editorial team
 
-[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+[Topic map](https://word-trove.netlify.app/llm/topics/word-lists.md) · [Complete scoped map](https://word-trove.netlify.app/sitemap.md)
 
 ## Quick answer
 
 There are 298 7 letter words starting with N in the WordTrove word list. The most common are NUMERIC, NETWORK, NEITHER, NEWLINE, NOTICES. The highest scoring is NUZZLED at 26 Scrabble points.
 
-Canonical list: [7 Letter Words Starting With N](https://wordtrove.app/7-letter-words-starting-with-n/)
+Canonical list: [7 Letter Words Starting With N](https://word-trove.netlify.app/7-letter-words-starting-with-n/)
 
 ## Key facts
 
@@ -71,4 +71,4 @@ NUMERIC, NEITHER, NEWLINE, NOTICES, NONZERO, NEEDING each contain several vowels
 
 ## Source and method
 
-Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [7 letter word finder](https://wordtrove.app/7-letter-words/).
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://word-trove.netlify.app/how-our-word-list-works/). To filter this list by more letters, use the [7 letter word finder](https://word-trove.netlify.app/7-letter-words/).

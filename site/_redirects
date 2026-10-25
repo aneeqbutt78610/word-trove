@@ -1,0 +1,3 @@
+# Serve the generated 404 page (built at /404/index.html) for unknown URLs.
+# Existing files are always served first, so this only catches missing paths.
+/*  /404/  404
