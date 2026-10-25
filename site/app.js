@@ -29,18 +29,22 @@
   // The inline head script defaults every visitor to denied and applies a stored accept before
   // gtag loads; this asks, records the choice for a year and updates consent live. No gtag
   // (GA4_ID unset) means no banner. GPC / Do Not Track count as "reject" and skip the banner.
+  // When the build has ads on, the footer button carries data-cc-ads and one choice covers both.
   if (window.gtag) {
     const CK = 'wt-consent', YEAR = 31536e6;
     const saved = (() => { try { const c = JSON.parse(localStorage.getItem(CK)); return c && Date.now() - c.t < YEAR ? c : null } catch (e) { return null } })();
     const optOut = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
+    const ads = !!$('[data-cc-ads]');
     const policy = $('.foot a[href*="privacy-policy"]');
-    const dropGa = () => document.cookie.split(';').map(c => c.split('=')[0].trim()).filter(n => /^_ga/.test(n)).forEach(n =>
+    // first-party cookies only: Google's doubleclick.net cookies can't be removed from this domain
+    const dropCookies = () => document.cookie.split(';').map(c => c.split('=')[0].trim()).filter(n => /^(_ga|__gads|__gpi|__eoi)/.test(n)).forEach(n =>
       ['', location.hostname, '.' + location.hostname].forEach(d => { document.cookie = `${n}=; Max-Age=0; path=/${d ? '; domain=' + d : ''}` }));
     let box;
     const choose = a => {
+      const v = a ? 'granted' : 'denied';
       try { localStorage.setItem(CK, JSON.stringify({ a, t: Date.now() })) } catch (e) {}
-      gtag('consent', 'update', { analytics_storage: a ? 'granted' : 'denied' });
-      if (!a) dropGa();
+      gtag('consent', 'update', ads ? { analytics_storage: v, ad_storage: v, ad_user_data: v, ad_personalization: v } : { analytics_storage: v });
+      if (!a) dropCookies();
       box.hidden = true;
     };
     const ask = focus => {
@@ -48,7 +52,9 @@
         box = document.createElement('section');
         box.className = 'cc';
         box.setAttribute('aria-label', 'Cookie consent');
-        box.innerHTML = `<p>We'd like to use Google Analytics cookies to learn which pages help people. They're only set if you accept. Your puzzle progress and theme stay in your browser either way.${policy ? ` <a href="${policy.getAttribute('href')}">Privacy policy</a>` : ''}</p><div class="cc-b"><button type="button" data-cc="0">Reject</button><button type="button" data-cc="1">Accept</button></div>`;
+        box.innerHTML = `<p>${ads
+          ? "We'd like to use cookies for Google Analytics, to learn which pages help people, and for personalised ads from Google, which keep the site free. They're only set if you accept; otherwise you'll see non-personalised ads."
+          : "We'd like to use Google Analytics cookies to learn which pages help people. They're only set if you accept."} Your puzzle progress and theme stay in your browser either way.${policy ? ` <a href="${policy.getAttribute('href')}">Privacy policy</a>` : ''}</p><div class="cc-b"><button type="button" data-cc="0">Reject</button><button type="button" data-cc="1">Accept</button></div>`;
         box.addEventListener('click', e => { const b = e.target.closest('[data-cc]'); if (b) choose(b.dataset.cc === '1') });
         document.body.append(box);
       }
@@ -58,6 +64,10 @@
     if (!saved && !optOut) ask(false);
     $$('[data-cc-open]').forEach(b => { b.onclick = () => ask(true) });
   }
+
+  // ---------- ads ----------
+  // Runs after the head consent default, so each unit is requested with the visitor's consent state.
+  $$('ins.adsbygoogle').forEach(() => { try { (window.adsbygoogle = window.adsbygoogle || []).push({}) } catch (e) {} });
 
   const cache = {};
   const load = src => cache[src] ||= fetch(src).then(r => { if (!r.ok) throw r.status; return r.text() }).then(t => t.split(' '));

@@ -19,8 +19,9 @@ Effective 2026-10-25. This policy explains what personal data WordTrove ("we", "
 ## Summary
 
 - No accounts, no sign-up, and nothing you type into the word tools ever leaves your browser.
-- Google Analytics runs only if you click **Accept** in the cookie banner. Change your mind any time with **Cookie settings** at the bottom of every page.
-- We do not sell your personal information or use it to profile you. We do not share it for targeted advertising.
+- Google Analytics and personalised ads run only if you click **Accept** in the cookie banner. Change your mind any time with **Cookie settings** at the bottom of every page.
+- Ads are shown by Google AdSense. Without your consent they are non-personalised.
+- We do not sell your personal information.
 - We honor Global Privacy Control and Do Not Track signals.
 - Fonts load from Google Fonts, which receives your IP address.
 
@@ -34,6 +35,7 @@ WordTrove is the controller of the personal data described in this policy. Conta
 |---|---|---|---|
 | IP address, browser type, page requested and time | Server logs kept by our host, Netlify | Deliver the site, keep it secure and stop abuse | Legitimate interests |
 | Pages viewed, device and browser type, approximate location (city or country) and referring site | Google Analytics, only after you accept | Learn which pages are useful and fix problems | Consent |
+| IP address, device and browser type, page viewed, approximate location, and advertising cookie IDs if you accept | Google AdSense, when a page shows an ad | Show the ads that pay for the site, measure them and prevent fraud | Consent for ad cookies and personalised ads; legitimate interests for non-personalised ads and fraud prevention |
 | IP address and browser user-agent | Google Fonts, when a page loads its fonts | Show the site's typefaces | Legitimate interests |
 | Your email address and message | You, when you email us | Reply to you | Legitimate interests |
 
@@ -41,17 +43,19 @@ We don't collect your searches, unscrambles or puzzle guesses: they are processe
 
 ## Cookies and local storage
 
-Strictly necessary storage is used without asking because it only does what you asked for. Analytics cookies are set only after you click **Accept**.
+Strictly necessary storage is used without asking because it only does what you asked for. Analytics and advertising cookies are set only after you click **Accept**.
 
 | Name | Type | Set by | Purpose | Expires | Consent needed |
 |---|---|---|---|---|---|
 | _ga | Cookie | Google Analytics | Tells visits from different browsers apart | 2 years | Yes |
 | _ga_ZKTGZ6ZKS4 | Cookie | Google Analytics | Keeps track of the current visit | 2 years | Yes |
+| __gads, __gpi | Cookie | Google AdSense | Measures ads and limits how often you see the same one | 13 months | Yes |
+| IDE, DSID | Cookie on doubleclick.net | Google | Personalises and measures ads across sites | IDE 13 months in the EEA and UK, up to 2 years elsewhere; DSID 2 weeks | Yes |
 | wt-consent | Local storage | WordTrove | Remembers your cookie choice | 12 months | No, strictly necessary |
 | theme | Local storage | WordTrove | Remembers light or dark mode | Until you clear site data | No, strictly necessary |
 | wt-day, wt-stats | Local storage | WordTrove | Saves daily puzzle progress, streak and stats | Until you clear site data | No, strictly necessary |
 
-Local storage stays on your device and we cannot read it. To change your choice, use **Cookie settings** at the bottom of any page. If you withdraw consent, we delete the Google Analytics cookies from your browser. You can also block or delete cookies and site data in your browser settings.
+Local storage stays on your device and we cannot read it. To change your choice, use **Cookie settings** at the bottom of any page. If you withdraw consent, we delete the Google Analytics and AdSense cookies set on this site from your browser. You can also block or delete cookies and site data in your browser settings.
 
 ## Google Analytics
 
@@ -65,7 +69,9 @@ We use Google Tag Manager to manage the measurement tags on this site. Tag Manag
 
 ## Advertising
 
-We show no ads, set no advertising cookies and do not share data for targeted advertising.
+We show ads from Google AdSense to keep the site free. Google and its partners use cookies and similar technologies to show ads, measure them, limit how often you see the same ad and prevent fraud. **Personalised ads, based on your past visits to this and other websites, are shown only if you click Accept.** Otherwise Google shows non-personalised or limited ads, chosen from the page you are reading and your approximate location. See [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites) and [how Google uses cookies in advertising](https://policies.google.com/technologies/ads).
+
+You can also manage ad personalisation in [My Ad Center](https://myadcenter.google.com) and opt out of many ad networks at [aboutads.info](https://optout.aboutads.info) or [youronlinechoices.eu](https://www.youronlinechoices.eu).
 
 ## Fonts
 
@@ -76,7 +82,7 @@ Page text is set in webfonts served by Google Fonts. Your browser requests those
 We don't sell, rent or trade personal data. We disclose it only to the service providers below, who process it for the purposes in this policy, or when the law requires it.
 
 - **Netlify, Inc.** (United States) hosts the site. [Netlify privacy policy](https://www.netlify.com/privacy/)
-- **Google LLC** (United States) provides Google Analytics, Google Tag Manager and Google Fonts. [Google privacy policy](https://policies.google.com/privacy)
+- **Google LLC** (United States) provides Google Analytics, Google Tag Manager, Google Fonts and Google AdSense advertising. [Google privacy policy](https://policies.google.com/privacy)
 
 ## International transfers
 
@@ -86,12 +92,13 @@ Our service providers are based in the United States, so your data may be proces
 
 - Server logs are kept by Netlify for a limited period under its own retention policy.
 - Analytics data is kept for up to 14 months, then deleted automatically.
+- Google keeps advertising data under [its own retention policy](https://policies.google.com/technologies/retention).
 - Emails are kept until your question is resolved, and no longer than 2 years.
 - Local storage stays on your device until you clear it, and your cookie choice expires after 12 months.
 
 ## Your rights
 
-Wherever you live, you can ask us what personal data we hold about you and ask us to correct it, delete it or stop using it. You can withdraw analytics consent at any time with **Cookie settings**. Withdrawing doesn't affect processing that already happened. Email **hello@wordtrove.app** to make a request. We reply within 30 days, or within 45 days where US state law allows. We may ask a question to confirm the request is yours. Because we collect so little, we often hold no data linked to you, and we will tell you if so. We will never treat you differently for using your rights.
+Wherever you live, you can ask us what personal data we hold about you and ask us to correct it, delete it or stop using it. You can withdraw consent for analytics and personalised ads at any time with **Cookie settings**. Withdrawing doesn't affect processing that already happened. Email **hello@wordtrove.app** to make a request. We reply within 30 days, or within 45 days where US state law allows. We may ask a question to confirm the request is yours. Because we collect so little, we often hold no data linked to you, and we will tell you if so. We will never treat you differently for using your rights.
 
 ## Europe, the UK and Switzerland
 
@@ -99,13 +106,13 @@ Under the GDPR, the UK GDPR and the Swiss FADP you have the right to access, rec
 
 ## California and other US states
 
-Under the CCPA as amended by the CPRA, and the privacy laws of states including Virginia, Colorado, Connecticut, Utah, Texas and Oregon, you have the right to know, access, correct and delete your personal information, and to opt out of its sale, its sharing for cross-context behavioral advertising, targeted advertising and profiling. **We do not sell or share personal information and do not use it for targeted advertising or profiling**, and we have not done so in the past 12 months.
+Under the CCPA as amended by the CPRA, and the privacy laws of states including Virginia, Colorado, Connecticut, Utah, Texas and Oregon, you have the right to know, access, correct and delete your personal information, and to opt out of its sale, its sharing for cross-context behavioral advertising, targeted advertising and profiling. We do not sell personal information for money. Personalised ads from Google may count as sharing for cross-context behavioral advertising, or as targeted advertising, under some state laws. They are shown only if you click **Accept**, and we treat a Global Privacy Control signal as an opt-out. To opt out at any time, choose **Reject** in **Cookie settings**.
 
-In the past 12 months we collected these categories of personal information: identifiers (IP address, analytics cookie IDs) and internet activity (server logs, and pages viewed if you accepted analytics), from the sources and for the purposes in the table above. We do not collect sensitive personal information. You may use an authorized agent to make a request on your behalf.
+In the past 12 months we collected these categories of personal information: identifiers (IP address, analytics cookie IDs, advertising cookie IDs) and internet activity (server logs, ad requests, and pages viewed if you accepted analytics), from the sources and for the purposes in the table above. We do not collect sensitive personal information. You may use an authorized agent to make a request on your behalf.
 
 ## Global Privacy Control and Do Not Track
 
-If your browser sends a Global Privacy Control (GPC) or Do Not Track signal, we treat it as a choice to opt out: Google Analytics stays off and we don't show the cookie banner. You can still turn analytics on with **Cookie settings** if you want to.
+If your browser sends a Global Privacy Control (GPC) or Do Not Track signal, we treat it as a choice to opt out: Google Analytics and personalised ads stay off and we don't show the cookie banner. You can still turn them on with **Cookie settings** if you want to.
 
 ## Other countries
 

@@ -16,7 +16,9 @@ GSC_VERIFY = "5lh5U4vN7c49gHNKccb-U83lNsyciPI-t-EHPENubko"   # Google Search Con
 GA4_ID = "G-ZKTGZ6ZKS4"   # GA4 measurement ID; "" removes the tag, its CSP entries and the privacy-policy section
 ADSENSE_ID = "ca-pub-1126177067663911"   # AdSense publisher ID: site-ownership meta on every page + ads.txt line. Serves no ads by itself
 GTM_ID = "GTM-N4GB3SKT"   # Google Tag Manager container; "" removes it. Loads after the consent default in GA_JS
-ADS_HEAD = ""        # paste your ad network <script> tag here when approved (AdSense, Ezoic, Publift...)
+ADSENSE_SLOT = "3863718145"   # AdSense display unit placed once per page by with_ad(); "" = no ads at all
+ADS_HEAD = (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_ID}" '
+            f'crossorigin="anonymous"></script>') if ADSENSE_ID and ADSENSE_SLOT else ""
 WEBFONTS = True      # False = no Google Fonts request at all (system fonts only, zero third parties)
 SUITE = os.environ.get("SEO_SUITE", "")   # path to the SEO suite checkout; empty = skip the Markdown layer
 LENGTHS = range(3, 9)
@@ -24,7 +26,7 @@ LENGTHS = range(3, 9)
 # Privacy note: GA4_ID, ADS_HEAD and WEBFONTS each add a third party that sees visitor IPs.
 # info_pages() writes the privacy policy from these three values, so the policy always
 # describes what the build actually ships. Turning one on without rebuilding makes the
-# policy wrong. ADS_HEAD also needs its own CSP entries added in csp() below.
+# policy wrong. ADS_HEAD's CSP entries live in csp() below and switch on with it.
 
 PREVIEW = "--preview" in sys.argv
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -54,11 +56,12 @@ def ldjson(x):
 THEME_JS = "try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}"
 # Google Consent Mode v2: everything starts denied for every visitor. A stored "accept" from
 # the banner in app.js (wt-consent, re-asked after a year) is the only thing that grants
-# analytics_storage; ads storage is never granted because the site runs no ads.
+# analytics_storage, and the ad signals too when ads are on (otherwise they stay denied).
+_AD = "g" if ADS_HEAD else "'denied'"
 GA_JS = (f"window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}"
          f"var c;try{{c=JSON.parse(localStorage.getItem('wt-consent'))}}catch(e){{}}"
-         f"gtag('consent','default',{{analytics_storage:c&&c.a&&Date.now()-c.t<31536e6?'granted':'denied',"
-         f"ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}});"
+         f"var g=c&&c.a&&Date.now()-c.t<31536e6?'granted':'denied';"
+         f"gtag('consent','default',{{analytics_storage:g,ad_storage:{_AD},ad_user_data:{_AD},ad_personalization:{_AD}}});"
          f"gtag('set','ads_data_redaction',true);"
          f"gtag('js',new Date());gtag('config','{GA4_ID}');") if GA4_ID else ""
 # Google's container snippet, minified. It shares dataLayer with GA_JS and comes after it, so every
@@ -81,6 +84,15 @@ def csp():
     # Google's documented GA4 CSP: hits go to regional *.google-analytics.com / *.analytics.google.com hosts
     connect = ["'self'"] + (["https://*.google-analytics.com", "https://*.analytics.google.com", "https://*.googletagmanager.com"] if GA4_ID else [])
     imgs = ["'self'", "data:"] + (["https://*.google-analytics.com", "https://*.googletagmanager.com"] if GA4_ID else [])
+    if ADS_HEAD:
+        # AdSense spreads across many Google hosts (and rotates them), so its families are allowed by
+        # wildcard. Ad creatives and tracking pixels come from arbitrary advertiser CDNs, hence https: for images.
+        ad_hosts = ["https://*.googlesyndication.com", "https://*.doubleclick.net", "https://*.google.com", "https://*.gstatic.com",
+                    "https://*.googleadservices.com", "https://*.googletagservices.com", "https://*.adtrafficquality.google"]
+        scripts += ad_hosts
+        connect += ad_hosts
+        frames += ad_hosts
+        imgs = ["'self'", "data:", "https:"]
     # 'unsafe-inline' in style-src covers the style="--i:N" tile-stagger attributes only;
     # no inline <style> blocks are emitted. Inline *scripts* are hash-pinned, not unsafe-inline.
     return "; ".join([
@@ -245,8 +257,25 @@ SITE_LD = {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE_URL
 
 SITEMAP, MDPAGES = [], []
 
+NO_ADS = {"privacy-policy", "terms", "contact", "404"}   # legal/error pages: AdSense discourages ads there
+
+def with_ad(slug, body):
+    """Place the one AdSense unit: after a tool's results, before the explanatory prose, so it never sits
+    among inputs or tiles. The daily puzzle puts it before its FAQ, away from the on-screen keyboard
+    (taps that land on an ad by accident count as invalid clicks). Plain pages get it at the end.
+    app.js pushes each unit to adsbygoogle, so there is no inline script to hash."""
+    if not ADS_HEAD or slug in NO_ADS: return body
+    ad = (f'<aside class="ad" aria-label="Advertisement"><ins class="adsbygoogle" style="display:block" '
+          f'data-ad-client="{esc(ADSENSE_ID)}" data-ad-slot="{esc(ADSENSE_SLOT)}" data-ad-format="auto" '
+          f'data-full-width-responsive="true"></ins></aside>')
+    mark = ('<section class="prose faq">' if 'data-tool="daily"' in body else
+            '<section class="prose' if 'class="results"' in body else None)
+    i = body.find(mark) if mark else -1
+    return body[:i] + ad + body[i:] if i >= 0 else body + ad
+
 def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
     """md = (md_title, purpose, topic, markdown_body) for the public Markdown mirror"""
+    body = with_ad(slug, body)
     ga = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={esc(GA4_ID)}"></script>'
           f"<script>{GA_JS}</script>") if GA4_ID else ""
     webpage = {"@context": "https://schema.org", "@type": "WebPage", "@id": canon(slug) + "#page", "url": canon(slug), "name": title,
@@ -279,9 +308,9 @@ def page(slug, title, desc, body, ld=(), preload=None, h_index=True, md=None):
 <meta name="referrer" content="strict-origin-when-cross-origin">{fonts}
 <link rel="stylesheet" href="{asset('style.css')}">{pre}
 <script>{THEME_JS}</script>
-{ADS_HEAD}{lds}"""
+{"" if slug in NO_ADS else ADS_HEAD}{lds}"""
     nav_l = "".join(f'<a href="{u(finder_slug(n))}" data-k="{finder_slug(n) or "home"}">{n}</a>' for n in LENGTHS)
-    cookie_btn = '<button class="fl" type="button" data-cc-open>Cookie settings</button>' if GA4_ID else ""
+    cookie_btn = f'<button class="fl" type="button" data-cc-open{" data-cc-ads" if ADS_HEAD else ""}>Cookie settings</button>' if GA4_ID else ""
     foot_az = "".join(f'<a href="{u(start_slug(5,c))}">{c.upper()}</a>' for c in ABC if has_start(5, c))
     content = f"""{gtm_ns}<a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap bar">
@@ -620,14 +649,17 @@ def privacy_md():
     ga_cookie = "_ga_" + GA4_ID.removeprefix("G-")
     gtm = bool(GTM_ID)
     google_uses = ((["Google Analytics"] if ga else []) + (["Google Tag Manager"] if gtm else [])
-                   + (["Google Fonts"] if fonts else []) + (["advertising"] if ads else []))
+                   + (["Google Fonts"] if fonts else []) + (["Google AdSense advertising"] if ads else []))
     L = lambda *parts: "\n".join(p for p in parts if p)   # join lines, dropping disabled ones
+    tracked = "Google Analytics and personalised ads" if ads else "Google Analytics"
 
     summary = L(
         "- No accounts, no sign-up, and nothing you type into the word tools ever leaves your browser.",
-        "- Google Analytics runs only if you click **Accept** in the cookie banner. Change your mind any time with **Cookie settings** at the bottom of every page." if ga else
+        f"- {tracked} run only if you click **Accept** in the cookie banner. Change your mind any time with **Cookie settings** at the bottom of every page." if ga else
         "- We run no analytics and set no tracking cookies.",
-        "- We do not sell your personal information or use it to profile you." + ("" if ads else " We do not share it for targeted advertising."),
+        "- Ads are shown by Google AdSense. Without your consent they are non-personalised." if ads else "",
+        "- We do not sell your personal information." if ads else
+        "- We do not sell your personal information, use it to profile you or share it for targeted advertising.",
         "- We honor Global Privacy Control and Do Not Track signals." if ga else "",
         "- Fonts load from Google Fonts, which receives your IP address." if fonts else "")
 
@@ -636,6 +668,7 @@ def privacy_md():
         "|---|---|---|---|",
         "| IP address, browser type, page requested and time | Server logs kept by our host, Netlify | Deliver the site, keep it secure and stop abuse | Legitimate interests |",
         "| Pages viewed, device and browser type, approximate location (city or country) and referring site | Google Analytics, only after you accept | Learn which pages are useful and fix problems | Consent |" if ga else "",
+        "| IP address, device and browser type, page viewed, approximate location, and advertising cookie IDs if you accept | Google AdSense, when a page shows an ad | Show the ads that pay for the site, measure them and prevent fraud | Consent for ad cookies and personalised ads; legitimate interests for non-personalised ads and fraud prevention |" if ads else "",
         "| IP address and browser user-agent | Google Fonts, when a page loads its fonts | Show the site's typefaces | Legitimate interests |" if fonts else "",
         "| Your email address and message | You, when you email us | Reply to you | Legitimate interests |")
 
@@ -644,6 +677,8 @@ def privacy_md():
         "|---|---|---|---|---|---|",
         "| _ga | Cookie | Google Analytics | Tells visits from different browsers apart | 2 years | Yes |" if ga else "",
         f"| {ga_cookie} | Cookie | Google Analytics | Keeps track of the current visit | 2 years | Yes |" if ga else "",
+        "| __gads, __gpi | Cookie | Google AdSense | Measures ads and limits how often you see the same one | 13 months | Yes |" if ads else "",
+        "| IDE, DSID | Cookie on doubleclick.net | Google | Personalises and measures ads across sites | IDE 13 months in the EEA and UK, up to 2 years elsewhere; DSID 2 weeks | Yes |" if ads else "",
         "| wt-consent | Local storage | " + SITE_NAME + " | Remembers your cookie choice | 12 months | No, strictly necessary |" if ga else "",
         "| theme | Local storage | " + SITE_NAME + " | Remembers light or dark mode | Until you clear site data | No, strictly necessary |",
         "| wt-day, wt-stats | Local storage | " + SITE_NAME + " | Saves daily puzzle progress, streak and stats | Until you clear site data | No, strictly necessary |")
@@ -664,7 +699,9 @@ We use Google Tag Manager to manage the measurement tags on this site. Tag Manag
     advertising = """
 ## Advertising
 
-We show ads to keep the site free. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. You can opt out of personalised advertising at [Google Ads Settings](https://adssettings.google.com) or [aboutads.info](https://www.aboutads.info).""" if ads else """
+We show ads from Google AdSense to keep the site free. Google and its partners use cookies and similar technologies to show ads, measure them, limit how often you see the same ad and prevent fraud. **Personalised ads, based on your past visits to this and other websites, are shown only if you click Accept.** Otherwise Google shows non-personalised or limited ads, chosen from the page you are reading and your approximate location. See [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites) and [how Google uses cookies in advertising](https://policies.google.com/technologies/ads).
+
+You can also manage ad personalisation in [My Ad Center](https://myadcenter.google.com) and opt out of many ad networks at [aboutads.info](https://optout.aboutads.info) or [youronlinechoices.eu](https://www.youronlinechoices.eu).""" if ads else """
 ## Advertising
 
 We show no ads, set no advertising cookies and do not share data for targeted advertising."""
@@ -681,13 +718,18 @@ Page text is set in webfonts served by Google Fonts. Your browser requests those
     gpc = """
 ## Global Privacy Control and Do Not Track
 
-If your browser sends a Global Privacy Control (GPC) or Do Not Track signal, we treat it as a choice to opt out: Google Analytics stays off and we don't show the cookie banner. You can still turn analytics on with **Cookie settings** if you want to.""" if ga else ""
+If your browser sends a Global Privacy Control (GPC) or Do Not Track signal, we treat it as a choice to opt out: {tracked} stay off and we don't show the cookie banner. You can still turn them on with **Cookie settings** if you want to.""" if ga else ""
+    gpc = gpc.replace("{tracked}", tracked)
 
-    us_sale = ("We do not sell personal information. Our advertising partners may use cookies for targeted advertising, which some state laws treat as sharing. You can opt out with the links in the Advertising section above or by turning on Global Privacy Control in your browser."
+    us_sale = ("We do not sell personal information for money. Personalised ads from Google may count as sharing for cross-context behavioral advertising, or as targeted advertising, under some state laws. They are shown only if you click **Accept**, and we treat a Global Privacy Control signal as an opt-out. To opt out at any time, choose **Reject** in **Cookie settings**."
                if ads else
                "**We do not sell or share personal information and do not use it for targeted advertising or profiling**, and we have not done so in the past 12 months.")
 
-    keep_ga = "- Analytics data is kept for up to 14 months, then deleted automatically.\n" if ga else ""
+    keep_ga = (("- Analytics data is kept for up to 14 months, then deleted automatically.\n" if ga else "")
+               + ("- Google keeps advertising data under [its own retention policy](https://policies.google.com/technologies/retention).\n" if ads else ""))
+    cookie_kind = "Analytics and advertising cookies are" if ads else "Analytics cookies are"
+    dropped = "Google Analytics and AdSense cookies set on this site" if ads else "Google Analytics cookies"
+    withdraw = "consent for analytics and personalised ads" if ads else "analytics consent"
 
     # disabled sections leave blank runs behind; collapse them so md2html emits no empty <p>
     return re.sub(r"\n{3,}", "\n\n", f"""
@@ -709,11 +751,11 @@ We don't collect your searches, unscrambles or puzzle guesses: they are processe
 
 ## Cookies and local storage
 
-Strictly necessary storage is used without asking because it only does what you asked for. {"Analytics cookies are set only after you click **Accept**." if ga else "We set no cookies."}
+Strictly necessary storage is used without asking because it only does what you asked for. {cookie_kind + " set only after you click **Accept**." if ga else "We set no cookies."}
 
 {storage}
 
-Local storage stays on your device and we cannot read it. {"To change your choice, use **Cookie settings** at the bottom of any page. If you withdraw consent, we delete the Google Analytics cookies from your browser. " if ga else ""}You can also block or delete cookies and site data in your browser settings.
+Local storage stays on your device and we cannot read it. {f"To change your choice, use **Cookie settings** at the bottom of any page. If you withdraw consent, we delete the {dropped} from your browser. " if ga else ""}You can also block or delete cookies and site data in your browser settings.
 {analytics}
 {advertising}
 {thirdparty}
@@ -736,7 +778,7 @@ Our service providers are based in the United States, so your data may be proces
 
 ## Your rights
 
-Wherever you live, you can ask us what personal data we hold about you and ask us to correct it, delete it or stop using it. {"You can withdraw analytics consent at any time with **Cookie settings**. Withdrawing doesn't affect processing that already happened. " if ga else ""}Email **{EMAIL}** to make a request. We reply within 30 days, or within 45 days where US state law allows. We may ask a question to confirm the request is yours. Because we collect so little, we often hold no data linked to you, and we will tell you if so. We will never treat you differently for using your rights.
+Wherever you live, you can ask us what personal data we hold about you and ask us to correct it, delete it or stop using it. {f"You can withdraw {withdraw} at any time with **Cookie settings**. Withdrawing doesn't affect processing that already happened. " if ga else ""}Email **{EMAIL}** to make a request. We reply within 30 days, or within 45 days where US state law allows. We may ask a question to confirm the request is yours. Because we collect so little, we often hold no data linked to you, and we will tell you if so. We will never treat you differently for using your rights.
 
 ## Europe, the UK and Switzerland
 
@@ -746,7 +788,7 @@ Under the GDPR, the UK GDPR and the Swiss FADP you have the right to access, rec
 
 Under the CCPA as amended by the CPRA, and the privacy laws of states including Virginia, Colorado, Connecticut, Utah, Texas and Oregon, you have the right to know, access, correct and delete your personal information, and to opt out of its sale, its sharing for cross-context behavioral advertising, targeted advertising and profiling. {us_sale}
 
-In the past 12 months we collected these categories of personal information: identifiers (IP address{", analytics cookie IDs" if ga else ""}) and internet activity (server logs{", and pages viewed if you accepted analytics" if ga else ""}), from the sources and for the purposes in the table above. We do not collect sensitive personal information. You may use an authorized agent to make a request on your behalf.
+In the past 12 months we collected these categories of personal information: identifiers (IP address{", analytics cookie IDs" if ga else ""}{", advertising cookie IDs" if ads else ""}) and internet activity (server logs{", ad requests" if ads else ""}{", and pages viewed if you accepted analytics" if ga else ""}), from the sources and for the purposes in the table above. We do not collect sensitive personal information. You may use an authorized agent to make a request on your behalf.
 {gpc}
 
 ## Other countries

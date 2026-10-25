@@ -137,6 +137,11 @@ a.az:hover{background:var(--hit);color:#fff;transform:translateY(-2px)}
 .fl{display:block;background:none;border:0;padding:3px 0;font:inherit;font-size:.95rem;color:var(--ink);cursor:pointer;text-align:left}
 .fl:hover{color:var(--accent)}
 
+/* ad slot: labelled, spaced off the tools above it, and collapsed when AdSense has nothing to show */
+.ad{margin:36px 0;padding-top:6px;border-top:1px solid var(--line)}
+.ad::before{content:"Advertisement";display:block;margin-bottom:6px;color:var(--muted);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+.ad:has(ins[data-ad-status="unfilled"]){display:none}
+
 /* cookie consent: Accept and Reject are deliberately identical so neither is nudged */
 .cc{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:600px;margin-inline:auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:16px 18px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.2);z-index:40}
 .cc[hidden]{display:none}
