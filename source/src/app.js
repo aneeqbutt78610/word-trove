@@ -25,6 +25,40 @@
     if (t) copy(t.dataset.copy || t.querySelector('b').textContent.toUpperCase());
   });
 
+  // ---------- cookie consent (Google Consent Mode v2) ----------
+  // The inline head script defaults every visitor to denied and applies a stored accept before
+  // gtag loads; this asks, records the choice for a year and updates consent live. No gtag
+  // (GA4_ID unset) means no banner. GPC / Do Not Track count as "reject" and skip the banner.
+  if (window.gtag) {
+    const CK = 'wt-consent', YEAR = 31536e6;
+    const saved = (() => { try { const c = JSON.parse(localStorage.getItem(CK)); return c && Date.now() - c.t < YEAR ? c : null } catch (e) { return null } })();
+    const optOut = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
+    const policy = $('.foot a[href*="privacy-policy"]');
+    const dropGa = () => document.cookie.split(';').map(c => c.split('=')[0].trim()).filter(n => /^_ga/.test(n)).forEach(n =>
+      ['', location.hostname, '.' + location.hostname].forEach(d => { document.cookie = `${n}=; Max-Age=0; path=/${d ? '; domain=' + d : ''}` }));
+    let box;
+    const choose = a => {
+      try { localStorage.setItem(CK, JSON.stringify({ a, t: Date.now() })) } catch (e) {}
+      gtag('consent', 'update', { analytics_storage: a ? 'granted' : 'denied' });
+      if (!a) dropGa();
+      box.hidden = true;
+    };
+    const ask = focus => {
+      if (!box) {
+        box = document.createElement('section');
+        box.className = 'cc';
+        box.setAttribute('aria-label', 'Cookie consent');
+        box.innerHTML = `<p>We'd like to use Google Analytics cookies to learn which pages help people. They're only set if you accept. Your puzzle progress and theme stay in your browser either way.${policy ? ` <a href="${policy.getAttribute('href')}">Privacy policy</a>` : ''}</p><div class="cc-b"><button type="button" data-cc="0">Reject</button><button type="button" data-cc="1">Accept</button></div>`;
+        box.addEventListener('click', e => { const b = e.target.closest('[data-cc]'); if (b) choose(b.dataset.cc === '1') });
+        document.body.append(box);
+      }
+      box.hidden = false;
+      if (focus) box.querySelector('button').focus();   // opened from the footer: move focus to the choice
+    };
+    if (!saved && !optOut) ask(false);
+    $$('[data-cc-open]').forEach(b => { b.onclick = () => ask(true) });
+  }
+
   const cache = {};
   const load = src => cache[src] ||= fetch(src).then(r => { if (!r.ok) throw r.status; return r.text() }).then(t => t.split(' '));
   const tile = (w, i) => `<li class="t" style="--i:${Math.min(i, 40)}"><b>${w}</b><i>${score(w)}</i></li>`;

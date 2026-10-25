@@ -7,7 +7,7 @@
   Cache-Control: public, max-age=86400
 
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-YFGi/mz/r2ZamOarnidksX2p7zCMPbq5lNt9pHjpRHI=' 'sha256-y1BV6ShUtRZMxX0NuMGfQ9fNkUZ8NHJhOzn0kgw3IL4=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-YFGi/mz/r2ZamOarnidksX2p7zCMPbq5lNt9pHjpRHI=' 'sha256-1UO+4MeCVKFS6RLvcaGdNicfDF/7YXMcXO9sO1LuWF4=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=()

@@ -134,6 +134,17 @@ a.az:hover{background:var(--hit);color:#fff;transform:translateY(-2px)}
 @media (max-width:700px){.fcols{grid-template-columns:1fr}}
 .fcols a{display:block;color:var(--ink);text-decoration:none;padding:3px 0;font-size:.95rem}
 .fcols a:hover{color:var(--accent)}
+.fl{display:block;background:none;border:0;padding:3px 0;font:inherit;font-size:.95rem;color:var(--ink);cursor:pointer;text-align:left}
+.fl:hover{color:var(--accent)}
+
+/* cookie consent: Accept and Reject are deliberately identical so neither is nudged */
+.cc{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:600px;margin-inline:auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:16px 18px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.2);z-index:40}
+.cc[hidden]{display:none}
+.cc p{flex:1 1 280px;margin:0;font-size:.92rem;line-height:1.5}
+.cc a{color:var(--accent)}
+.cc-b{display:flex;gap:8px;margin-left:auto}
+.cc button{min-width:96px;padding:10px 18px;border-radius:999px;border:2px solid var(--ink);background:var(--ink);color:var(--bg);font:700 .95rem/1 var(--body);cursor:pointer}
+.cc button:hover{background:transparent;color:var(--ink)}
 .fh{font:700 .8rem var(--display);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px}
 .fz{display:flex;flex-wrap:wrap;gap:4px 10px}.fz a{display:inline;font-weight:700}
 .copy{color:var(--muted);font-size:.85rem;margin-top:24px}
