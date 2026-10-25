@@ -1,0 +1,20 @@
+# WordTrove
+
+> WordTrove is a free word finder, word unscrambler, daily 5 letter word puzzle and set of 3 to 8 letter word lists with Scrabble scores.
+
+Inventory scope: complete. Content is maintained by WordTrove editorial team.
+
+If you are an LLM looking for site information, use the [content map](https://wordtrove.app/sitemap.md) to locate the relevant topic and its linked Markdown answer.
+Use that document's cited sources and canonical page; if the requested information is absent, report that gap.
+
+## Content map
+
+- [Site content map](https://wordtrove.app/sitemap.md): All public document destinations within the declared inventory.
+
+## Topics
+
+- [about-site](https://wordtrove.app/llm/topics/about-site.md): All public about-site documents in this inventory.
+- [games](https://wordtrove.app/llm/topics/games.md): All public games documents in this inventory.
+- [legal](https://wordtrove.app/llm/topics/legal.md): All public legal documents in this inventory.
+- [word-finders](https://wordtrove.app/llm/topics/word-finders.md): All public word-finders documents in this inventory.
+- [word-lists](https://wordtrove.app/llm/topics/word-lists.md): All public word-lists documents in this inventory.

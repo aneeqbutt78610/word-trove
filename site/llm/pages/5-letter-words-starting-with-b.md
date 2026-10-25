@@ -1,0 +1,89 @@
+# 5 Letter Words Starting With B
+
+Canonical: [5 Letter Words Starting With B](https://wordtrove.app/5-letter-words-starting-with-b/)
+
+Locale: en
+
+Purpose: Complete list of 5 letter words starting with B with Scrabble scores
+
+Content updated: 2026-10-24
+
+Source revision: build-2026-10-24
+
+Maintenance owner: WordTrove editorial team
+
+[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+
+## Quick answer
+
+There are 477 5 letter words starting with B in the WordTrove word list. The most common are BOOST, BUILD, BEAST, BASIC, BEING. The highest scoring is BOOZY at 19 Scrabble points.
+
+Canonical list: [5 Letter Words Starting With B](https://wordtrove.app/5-letter-words-starting-with-b/)
+
+## Key facts
+
+- Words in this list: 477
+- Highest scoring: BOOZY (19 points)
+- Order: most common first, using word frequency in an English text corpus
+- Updated: 2026-10-24
+
+## All 5 letter words starting with b
+
+BOOST, BUILD, BEAST, BASIC, BEING, BUILT, BASED, BLOCK, BELOW, BREAK, BYTES, BASIS
+BEGIN, BOUND, BRING, BENCH, BLANK, BISON, BOGUS, BROWN, BROKE, BLACK, BATCH, BRAND
+BASES, BRIEF, BETAS, BUMPS, BRUSH, BUNCH, BOARD, BURKE, BERRY, BRACE, BUGGY, BOXES
+BLIND, BABEL, BOMBE, BOOKS, BILLY, BREVE, BADLY, BARON, BIRTH, BLEND, BOBBY, BLOBS
+BLAZE, BANDS, BINDS, BACON, BALSA, BLOOM, BAKER, BASIL, BEDEL, BRENT, BRICK, BEARS
+BLAME, BOOTH, BROOK, BURST, BOXER, BRAVO, BRAVE, BROCK, BUDDY, BROAD, BELLS, BUSES
+BEGAN, BANKS, BATES, BONNE, BREDE, BRUTE, BILLS, BLUES, BOOTS, BARRE, BLAST, BLINK
+BLURB, BRAIN, BEANS, BENNY, BLOAT, BLOOD, BLOWN, BONUS, BRAKE, BUENO, BUMPY, BAILS
+BOATS, BOLES, BONES, BRADS, BABUL, BACCY, BADGE, BAGEL, BAGGY, BAIRN, BAIZA, BAIZE
+BAKED, BALAS, BALDY, BALER, BALKY, BALLS, BALLY, BALMY, BANAL, BANDY, BANJO, BANNS
+BARDE, BARGE, BARIC, BARIT, BARMY, BARYE, BASAL, BASIN, BASSO, BASTE, BATED, BATHE
+BATHS, BATIK, BATON, BATTY, BAWDY, BAYOU, BAZAR, BEACH, BEADY, BEAMY, BEANO, BEARD
+BEAUT, BEBOP, BEDEW, BEDIM, BEECH, BEEFY, BEERY, BEFIT, BEFOG, BEGAT, BEGET, BEGOT
+BEGUM, BEGUN, BEIGE, BELAY, BELCH, BELGA, BELIE, BELLE, BELLY, BENDY, BENNE, BERET
+BERTH, BERYL, BESET, BESOM, BESOT, BETEL, BETHS, BETTA, BEVEL, BEVVY, BEZEL, BHAJI
+BHANG, BIALY, BIBLE, BICEP, BIDDY, BIDET, BIELD, BIFID, BIGHT, BIGOT, BIJOU, BIKER
+BILBO, BILGE, BIMAH, BIMBO, BINAL, BINGE, BINGO, BIOME, BIOTA, BIPED, BIPOD, BIRCH
+BITER, BITTY, BLADE, BLAHS, BLAIN, BLAND, BLARE, BLASE, BLATE, BLEAK, BLEAR, BLEAT
+BLEED, BLEEP, BLESS, BLIMP, BLINI, BLISS, BLITZ, BLOKE, BLOND, BLOOP, BLOWY, BLUET
+BLUEY, BLUFF, BLUNT, BLURT, BLUSH, BOART, BOAST, BODGE, BOFFO, BOGEY, BOGGY, BOGIE
+BOGLE, BOGON, BOINK, BOLUS, BONCE, BONED, BONER, BONGO, BONNY, BONZE, BOOBY, BOONG
+BOOTY, BOOZE, BOOZY, BORAK, BORAX, BORER, BORIC, BORNE, BORON, BOSKY, BOSOM, BOSON
+BOSSY, BOTCH, BOTEL, BOTHY, BOUGH, BOULE, BOUSE, BOVID, BOWED, BOWEL, BOWER, BOWSE
+BOYAR, BOYLA, BRACH, BRACT, BRAID, BRAIL, BRANT, BRASH, BRASS, BRAWL, BRAWN, BRAXY
+BRAZE, BREAD, BREAM, BREED, BRIBE, BRIDE, BRIER, BRILL, BRINE, BRINK, BRINY, BRISK
+BROCH, BROIL, BRONC, BROOD, BROOM, BROSE, BROTH, BRUIN, BRUIT, BRUME, BRUNT, BUBAL
+BUBBA, BUCKO, BUDGE, BUFFO, BUGLE, BULGE, BULGY, BULKY, BULLA, BULLY, BUMPH, BUNCO
+BUNNY, BURAN, BURBS, BURET, BURGH, BURIN, BURKA, BURLY, BURNT, BURRO, BURRY, BURSA
+BURSE, BUSBY, BUSED, BUSHY, BUSTY, BUTCH, BUTEO, BUTTE, BUTTY, BUTUT, BUTYL, BUXOM
+BUYER, BWANA, BYLAW, BYWAY, BAAED, BABAS, BABES, BACKS, BAHTS, BAITS, BAKES, BALDS
+BALED, BALES, BALKS, BALMS, BANES, BANGS, BARBS, BARDS, BARED, BARER, BARES, BARFS
+BARKS, BARMS, BARNS, BASER, BASKS, BAUDS, BAWDS, BAWLS, BAYED, BEADS, BEAKS, BEAMS
+BEATS, BEAUS, BECKS, BEEFS, BEEPS, BEERS, BEETS, BELTS, BEMAS, BENDS, BENTS, BERGS
+BERKS, BERMS, BESTS, BIDES, BIERS, BIFFS, BIKED, BIKES, BILKS, BINES, BIRDS, BIRLS
+BIRRS, BISES, BITES, BITTS, BLABS, BLAGS, BLATS, BLEBS, BLING, BLIPS, BLOCS, BLOGS
+BLOTS, BLOWS, BLUED, BLUER, BLURS, BOARS, BODED, BODES, BOILS, BOLAS, BOLLS, BOLOS
+BOLTS, BOMBS, BONDS, BONGS, BONKS, BOOBS, BOOED, BOOMS, BOONS, BOORS, BORED, BORES
+BOUTS, BOWLS, BOXED, BOXEN, BOZOS, BRAES, BRAGS, BRATS, BRAYS, BREWS, BRIGS, BRIMS
+BRITS, BROWS, BUCKS, BUFFS, BUHLS, BULBS, BULKS, BULLS, BUNGS, BUNKS, BUNTS, BUOYS
+BURGS, BURLS, BURNS, BURPS, BURRS, BUSKS, BUSTS, BUTTS, BYRES
+
+## Frequently asked questions
+
+### How many 5 letter words starting with b are there?
+
+There are 477 5 letter words starting with b in the WordTrove word list, which is based on the SCOWL English dictionary.
+
+### What is the highest scoring 5 letter word starting with B?
+
+BOOZY is worth 19 points with standard English Scrabble tile values.
+
+### Which 5 letter words starting with b have the most vowels?
+
+BUENO, BAIZA, BAIZE, BAYOU, BEANO, BEAUT each contain several vowels, which makes them useful for testing letters in Wordle.
+
+## Source and method
+
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://wordtrove.app/).

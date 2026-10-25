@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>How Our Word List Works | WordTrove</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Where the WordTrove word list comes from, how it is filtered and scored, and its limits.">
+<link rel="canonical" href="https://wordtrove.app/how-our-word-list-works/">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<meta name="theme-color" content="#1b2433">
+<meta property="og:type" content="website"><meta property="og:site_name" content="WordTrove">
+<meta property="og:title" content="How Our Word List Works | WordTrove"><meta property="og:description" content="Where the WordTrove word list comes from, how it is filtered and scored, and its limits.">
+<meta property="og:url" content="https://wordtrove.app/how-our-word-list-works/"><meta property="og:image" content="https://wordtrove.app/logo.png"><meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="alternate" type="text/markdown" href="https://wordtrove.app/llm/pages/how-our-word-list-works.md">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Unbounded:wght@600;800&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://wordtrove.app/how-our-word-list-works/#page","url":"https://wordtrove.app/how-our-word-list-works/","name":"How Our Word List Works | WordTrove","description":"Where the WordTrove word list comes from, how it is filtered and scored, and its limits.","isPartOf":{"@id":"https://wordtrove.app/#site"},"dateModified":"2026-10-24","inLanguage":"en"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wordtrove.app/"},{"@type":"ListItem","position":2,"name":"How Our Word List Works","item":"https://wordtrove.app/how-our-word-list-works/"}]}</script></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap bar">
+<a class="logo" href="/" aria-label="WordTrove home"><img class="lt" src="/logo-mark.png" width="38" height="34" alt=""><span>Word<em>Trove</em></span></a>
+<nav class="nav" aria-label="Main"><span class="nl">Letters</span><a href="/3-letter-words/" data-k="3-letter-words">3</a><a href="/4-letter-words/" data-k="4-letter-words">4</a><a href="/" data-k="home">5</a><a href="/6-letter-words/" data-k="6-letter-words">6</a><a href="/7-letter-words/" data-k="7-letter-words">7</a><a href="/8-letter-words/" data-k="8-letter-words">8</a><a href="/word-unscrambler/" data-k="word-unscrambler">Unscramble</a><a href="/daily-word-puzzle/" data-k="daily-word-puzzle" class="daily-link">Daily<span class="dot" hidden></span></a><a href="/word-lists/" data-k="word-lists">Lists</a></nav>
+<button class="theme" id="theme" type="button" aria-label="Switch light or dark theme"><span></span></button>
+</div></header>
+<main id="main" class="wrap" data-page="how-our-word-list-works"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">How Our Word List Works</span></nav><section class="hero slim"><h1>How Our Word List Works</h1></section><section class="prose"><h2>Quick answer</h2>
+<p>WordTrove uses the SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). We expand its root words into plurals and other inflected forms, keep lowercase words of 3 to 8 letters, and remove proper nouns, abbreviations and offensive words. The result is 54,779 words.</p>
+<h2>Source dictionary</h2>
+<p>The list starts from <a href="https://wordlist.aspell.net/">SCOWL</a>, the Spell Checker Oriented Word Lists maintained by Kevin Atkinson, as packaged for Hunspell en_US by Debian (release 2020.12.07, size 70). Size 70 includes common and moderately rare words but leaves out the most obscure entries.</p>
+<h2>How we filter it</h2>
+<ul><li>Expand each root word with the dictionary's own affix rules, such as plural -s and past tense -ed.</li><li>Keep only words written in lowercase letters a to z, which removes proper nouns, abbreviations and words with apostrophes.</li><li>Keep words from 3 to 8 letters long.</li><li>Remove a short list of slurs and profanity.</li></ul>
+<h2>Word counts</h2>
+<div class="tw"><table><thead><tr><th>Length</th><th>Words</th><th>Highest scoring</th></tr></thead><tbody><tr><td>3 letters</td><td>1,061</td><td>XXX (24)</td></tr><tr><td>4 letters</td><td>3,386</td><td>JAZZ (29)</td></tr><tr><td>5 letters</td><td>6,543</td><td>PZAZZ (34)</td></tr><tr><td>6 letters</td><td>10,871</td><td>JAZZED (32)</td></tr><tr><td>7 letters</td><td>15,481</td><td>PIZZAZZ (45)</td></tr><tr><td>8 letters</td><td>17,437</td><td>QUIZZING (36)</td></tr></tbody></table></div>
+<h2>How scores are calculated</h2>
+<p>Each word's score is the sum of standard English Scrabble tile values: A, E, I, L, N, O, R, S, T and U are 1; D and G are 2; B, C, M and P are 3; F, H, V, W and Y are 4; K is 5; J and X are 8; Q and Z are 10. Board bonuses are not included.</p>
+<h2>How "common first" ordering works</h2>
+<p>Words are ranked by how often they appear in an English text corpus of about 50 MB of software documentation and manual pages. This ranks everyday words first but leans slightly toward technical vocabulary. Words that never appear in that corpus are listed alphabetically after it.</p>
+<h2>Limits</h2>
+<ul><li>This is not the official Scrabble dictionary (NWL or Collins) or the Wordle answer list. A word we list may not be accepted by a given game, and some game words are missing.</li><li>Words longer than 8 letters are not included.</li></ul>
+<p>Updated 2026-10-24. Report a missing or wrong word on the <a href="/contact/">contact page</a>.</p></section></main>
+<footer class="foot"><div class="wrap">
+<div class="fcols">
+<div><p class="fh">Word finders</p><a href="/3-letter-words/">3 letter word finder</a><a href="/4-letter-words/">4 letter word finder</a><a href="/">5 letter word finder</a><a href="/6-letter-words/">6 letter word finder</a><a href="/7-letter-words/">7 letter word finder</a><a href="/8-letter-words/">8 letter word finder</a><a href="/word-unscrambler/">Word unscrambler</a><a href="/daily-word-puzzle/">Daily word puzzle</a></div>
+<div><p class="fh">5 letter words starting with</p><div class="fz"><a href="/5-letter-words-starting-with-a/">A</a><a href="/5-letter-words-starting-with-b/">B</a><a href="/5-letter-words-starting-with-c/">C</a><a href="/5-letter-words-starting-with-d/">D</a><a href="/5-letter-words-starting-with-e/">E</a><a href="/5-letter-words-starting-with-f/">F</a><a href="/5-letter-words-starting-with-g/">G</a><a href="/5-letter-words-starting-with-h/">H</a><a href="/5-letter-words-starting-with-i/">I</a><a href="/5-letter-words-starting-with-j/">J</a><a href="/5-letter-words-starting-with-k/">K</a><a href="/5-letter-words-starting-with-l/">L</a><a href="/5-letter-words-starting-with-m/">M</a><a href="/5-letter-words-starting-with-n/">N</a><a href="/5-letter-words-starting-with-o/">O</a><a href="/5-letter-words-starting-with-p/">P</a><a href="/5-letter-words-starting-with-q/">Q</a><a href="/5-letter-words-starting-with-r/">R</a><a href="/5-letter-words-starting-with-s/">S</a><a href="/5-letter-words-starting-with-t/">T</a><a href="/5-letter-words-starting-with-u/">U</a><a href="/5-letter-words-starting-with-v/">V</a><a href="/5-letter-words-starting-with-w/">W</a><a href="/5-letter-words-starting-with-x/">X</a><a href="/5-letter-words-starting-with-y/">Y</a><a href="/5-letter-words-starting-with-z/">Z</a></div><a href="/word-lists/">All word lists →</a></div>
+<div><p class="fh">WordTrove</p><a href="/about/">About</a><a href="/how-our-word-list-works/">How our word list works</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy policy</a><a href="/terms/">Terms of use</a></div>
+</div>
+<p class="copy">© 2026 WordTrove. Independent word finder for Wordle, Scrabble and every word game. Not affiliated with The New York Times, Hasbro or Mattel.</p>
+</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/app.js" defer></script>
+</body></html>

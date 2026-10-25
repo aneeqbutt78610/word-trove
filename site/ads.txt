@@ -1,0 +1,1 @@
+# Paste the lines your ad network gives you here (required for AdSense, Ezoic, Publift).

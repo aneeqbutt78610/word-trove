@@ -1,0 +1,79 @@
+# 6 Letter Words Starting With E
+
+Canonical: [6 Letter Words Starting With E](https://wordtrove.app/6-letter-words-starting-with-e/)
+
+Locale: en
+
+Purpose: Complete list of 6 letter words starting with E with Scrabble scores
+
+Content updated: 2026-10-24
+
+Source revision: build-2026-10-24
+
+Maintenance owner: WordTrove editorial team
+
+[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+
+## Quick answer
+
+There are 354 6 letter words starting with E in the WordTrove word list. The most common are ENABLE, EITHER, EXCEPT, ERRORS, EXTENT. The highest scoring is EXEQUY at 25 Scrabble points.
+
+Canonical list: [6 Letter Words Starting With E](https://wordtrove.app/6-letter-words-starting-with-e/)
+
+## Key facts
+
+- Words in this list: 354
+- Highest scoring: EXEQUY (25 points)
+- Order: most common first, using word frequency in an English text corpus
+- Updated: 2026-10-24
+
+## All 6 letter words starting with e
+
+ENABLE, EITHER, EXCEPT, ERRORS, EXTENT, ENTITY, EXISTS, EXPORT, ENSURE, EFFECT, ENGINE, ENTIRE
+EXPAND, EXTEND, ESCAPE, ENOUGH, EASIER, EXPECT, EDITOR, EVENTS, ENCODE, EXTRAS, EASILY, EQUALS
+ENDING, EXPIRE, EXCESS, EFFORT, EXOTIC, EXTERN, ERASED, EXPOSE, ENERGY, EDITED, EXITED, EPOCHS
+EXPERT, ERRATA, EXCEED, EXPIRY, ELECTS, EMBEDS, EVOLVE, EXEMPT, ENTERS, ETUDES, EIGHTH, EXCUSE
+EARWAX, ENRICH, ETCHER, EASING, EVENLY, EVOKES, EGRESS, EMPLOY, EMAILS, EMERGE, ENLIST, EXPEND
+ELIDES, ESTERS, ECHOES, EMBOSS, ENCORE, EQUITY, EVINCE, EXTANT, ERASES, EIGHTY, ELICIT, EMBARK
+EMPTOR, EQUATE, ERRANT, ESCROW, ECHOED, EMOJIS, EAGLET, EARBUD, EARFUL, EARLAP, EARNED, EARNER
+EARTHS, EARTHY, EARWIG, EATAGE, EATERY, ECESES, ECESIS, ECHOIC, ECLAIR, ECTYPE, ECZEMA, EDDOES
+EDGILY, EDGING, EDIBLE, EERILY, EFFACE, EFFETE, EFFIGY, EFFLUX, EFFUSE, EGESTA, EGGCUP, EGGNOG
+EGOISM, EGOIST, EIDOLA, EJECTA, ELAPID, ELAPSE, ELATED, ELEGIT, ELEVEN, ELEVON, ELFISH, ELIXIR
+ELODEA, ELOIGN, ELVISH, EMBALM, EMBANK, EMBLEM, EMBODY, EMBOLI, EMBOLY, EMBRUE, EMBRYO, EMESIS
+EMETIC, EMIGRE, EMPALE, EMPERY, EMPIRE, ENAMEL, ENAMOR, ENCAGE, ENCAMP, ENCASE, ENCYST, ENDEAR
+ENDIVE, ENDRIN, ENDURE, ENFACE, ENFOLD, ENGAGE, ENGIRD, ENGLUT, ENGOBE, ENGRAM, ENGULF, ENIGMA
+ENISLE, ENJOIN, ENLACE, ENMESH, ENMITY, ENNEAD, ENOSIS, ENRAGE, ENROBE, ENROLL, ENROOT, ENSIGN
+ENSILE, ENSOUL, ENTAIL, ENTICE, ENTOIL, ENTOMB, ENTRAP, ENTREE, ENWIND, ENWOMB, ENWRAP, ENZYME
+EOLIAN, EOLITH, EONIAN, EONISM, EPARCH, EPHAHS, EPHEBE, EPICAL, EPIZOA, EPONYM, EQUINE, ERASER
+ERBIUM, ERENOW, ERINGO, ERMINE, EROTIC, ERRAND, ERSATZ, ERYNGO, ESCARP, ESCHAR, ESCHEW, ESCORT
+ESCUDO, ESPIAL, ESPRIT, ESSIVE, ESTATE, ESTEEM, ESTRAY, ESTRIN, ESTRUM, ESTRUS, ETALON, ETERNE
+ETHANE, ETHENE, ETHICS, ETHNIC, ETHNOL, ETHYNE, ETYMON, EUCHRE, EULOGY, EUNUCH, EUREKA, EVADER
+EVZONE, EXARCH, EXCIDE, EXCISE, EXCITE, EXEDRA, EXEQUY, EXEUNT, EXHALE, EXHORT, EXHUME, EXILIC
+EXODUS, EXSECT, EXSERT, EXTINE, EXTORT, EYECUP, EYEFUL, EYEING, EYELET, EYELID, EAGLES, EAGRES
+EARING, EASELS, EATERS, EATING, EBBING, ECHOER, EDDIED, EDDIES, EDEMAS, EDGERS, EDGIER, EDICTS
+EDUCED, EDUCES, EERIER, EFFING, EGESTS, EGGERS, EGGING, EGRETS, EIDERS, EIGHTS, EJECTS, ELANDS
+ELATER, ELATES, ELBOWS, ELDERS, ELDEST, ELEMIS, ELIDED, ELITES, ELOPED, ELOPER, ELOPES, ELUDED
+ELUDER, ELUDES, ELUTED, ELUTES, ELVERS, EMBERS, EMCEED, EMCEES, EMENDS, EMMERS, EMMETS, EMOTED
+EMOTER, EMOTES, ENACTS, ENATES, ENDOWS, ENDUED, ENDUES, ENEMAS, ENJOYS, ENSUED, ENSUES, ENVIED
+ENVIER, ENVIES, ENVOIS, ENVOYS, EOSINS, EPOSES, EQUIPS, ERECTS, ERODED, ERODES, ERRING, ERUCTS
+ERUPTS, ESPIED, ESPIES, ESSAYS, ETCHED, ETCHES, EVADED, EVADES, EVENED, EVENER, EVICTS, EVILER
+EVILLY, EVOKED, EVOKER, EXACTS, EXALTS, EXAMEN, EXCELS, EXERTS, EXILED, EXILES, EXPATS, EXPELS
+EXTOLS, EXUDED, EXUDES, EXULTS, EXURBS, EYASES
+
+## Frequently asked questions
+
+### How many 6 letter words starting with e are there?
+
+There are 354 6 letter words starting with e in the WordTrove word list, which is based on the SCOWL English dictionary.
+
+### What is the highest scoring 6 letter word starting with E?
+
+EXEQUY is worth 25 points with standard English Scrabble tile values.
+
+### Which 6 letter words starting with e have the most vowels?
+
+ENABLE, EITHER, ENSURE, ENGINE, ENTIRE, ESCAPE each contain several vowels, which makes them useful for testing letters in Wordle.
+
+## Source and method
+
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [6 letter word finder](https://wordtrove.app/6-letter-words/).

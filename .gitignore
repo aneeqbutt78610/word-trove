@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+source/out/
+# private SEO research notes, never published
+work/

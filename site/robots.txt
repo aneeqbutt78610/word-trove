@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://wordtrove.app/sitemap.xml
+# If you are an LLM looking for site information, start at https://wordtrove.app/llms.txt.
+# Use https://wordtrove.app/sitemap.md to find the relevant topic and its linked Markdown answer; if it is absent, report that gap.

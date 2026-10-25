@@ -1,0 +1,88 @@
+# 5 Letter Words Ending in D
+
+Canonical: [5 Letter Words Ending in D](https://wordtrove.app/5-letter-words-ending-in-d/)
+
+Locale: en
+
+Purpose: Complete list of 5 letter words ending in D with Scrabble scores
+
+Content updated: 2026-10-24
+
+Source revision: build-2026-10-24
+
+Maintenance owner: WordTrove editorial team
+
+[Topic map](https://wordtrove.app/llm/topics/word-lists.md) · [Complete scoped map](https://wordtrove.app/sitemap.md)
+
+## Quick answer
+
+There are 460 5 letter words ending in D in the WordTrove word list. The most common are BUILD, FOUND, AVOID, ADDED, FIXED. The highest scoring is FAZED at 18 Scrabble points.
+
+Canonical list: [5 Letter Words Ending in D](https://wordtrove.app/5-letter-words-ending-in-d/)
+
+## Key facts
+
+- Words in this list: 460
+- Highest scoring: FAZED (18 points)
+- Order: most common first, using word frequency in an English text corpus
+- Updated: 2026-10-24
+
+## All 5 letter words ending in d
+
+BUILD, FOUND, AVOID, ADDED, FIXED, BASED, WOULD, FIELD, COULD, THIRD, NAMED, VALID
+MOVED, WORLD, BOUND, GUARD, OWNED, SPEED, MIXED, ROUND, EMBED, TIMED, SAVED, STAND
+BRAND, SOUND, HOMED, CHILD, TYPED, MONAD, CODED, TILED, AHEAD, SHRED, SIZED, YIELD
+CLOUD, KEYED, FUSED, ASKED, FILED, FREED, NOTED, TRIED, BOARD, DATED, AMEND, BLIND
+CURED, WEIRD, RATED, FIRED, FLUID, BLEND, SQUID, HOPED, VIVID, ENDED, POUND, ZONED
+GRAND, SOLID, SPEND, CITED, FAKED, PIPED, WIRED, LAMED, BROAD, PAGED, TUNED, FIEND
+FLOOD, HEARD, HOARD, RAPID, FJORD, TIRED, ACTED, AIMED, MINED, CASED, DROID, GUILD
+STEAD, FRIED, AIDED, BLOOD, SCEND, STEED, STOOD, AIRED, FACED, LIKED, LIVED, OPTED
+PARED, SHIED, SIDED, WANED, ACRID, ALGID, ALKYD, ALOUD, APHID, AROID, ARSED, AWARD
+BAKED, BATED, BEARD, BIELD, BIFID, BIPED, BIPOD, BLAND, BLEED, BLOND, BONED, BOVID
+BOWED, BRAID, BREAD, BREED, BROOD, BUSED, CAGED, CAIRD, CHARD, CHORD, CONTD, CREED
+CROWD, CUPID, CYCAD, DAZED, DREAD, DRUID, DRYAD, ELAND, EMEND, EPHOD, FARAD, FAZED
+FELID, FETID, FJELD, FRAUD, FREMD, FROND, GADID, GELID, GEOID, GLAND, GONAD, GOURD
+GREED, GRIND, HEXAD, HOUND, HUMID, HYOID, IZARD, JADED, JERID, JIHAD, KNEAD, LAIRD
+LIARD, LINED, LIPID, LIVID, LOVED, LUCID, LURID, MAUND, MOPED, MOUND, NAIAD, NAKED
+NITID, NOMAD, OCTAD, OOTID, OREAD, OVOID, PAVED, PAVID, PAYED, PLAID, PLEAD, POSED
+PROUD, PSEUD, PYOID, RABID, REBID, RIGID, SALAD, SAPID, SCALD, SCOLD, SCROD, SHARD
+SHEND, SKALD, SNOOD, SQUAD, STAID, SWARD, SWORD, SYNOD, TAMED, TAXED, TEPID, TIMID
+TREAD, TREND, TRIAD, TUMID, TWEED, UNBID, UNFED, UNWED, UPEND, UPPED, VAPID, VIAND
+VICED, WAGED, WEALD, WIELD, WOALD, WOUND, ZOOID, ACHED, ACNED, ACRED, AILED, ANTED
+ARCED, ARMED, ASHED, AWNED, BAAED, BALED, BARED, BAYED, BIKED, BLUED, BODED, BOOED
+BORED, BOXED, CAKED, CANED, CAPED, CARED, CAVED, CAWED, CEDED, CERED, CLUED, COKED
+CONED, COOED, COPED, CORED, COWED, COXED, CRIED, CUBED, DARED, DICED, DIKED, DINED
+DIVED, DOLED, DOMED, DOPED, DOSED, DOTED, DOZED, DRIED, DUDED, DUPED, EARED, EASED
+EBBED, EDGED, EFFED, EGGED, ERRED, FADED, FAMED, FARED, FATED, FAXED, FETED, FINED
+FLIED, FOXED, FUMED, GAMED, GAPED, GATED, GAZED, GIBED, GLUED, GORED, GUYED, GYVED
+HALED, HARED, HATED, HAWED, HAYED, HAZED, HEWED, HEXED, HIDED, HIKED, HIRED, HIVED
+HOKED, HOLED, HONED, HOSED, HYPED, IDLED, INCED, INKED, IRKED, IVIED, JAPED, JAWED
+JIBED, JIVED, JOKED, JOYED, KITED, KNEED, LACED, LADED, LASED, LATED, LAVED, LAZED
+LIMED, LOBED, LOPED, LOWED, LUBED, LUGED, LURED, MACED, MANED, MATED, MAXED, METED
+MEWED, MIKED, MIMED, MIRED, MOOED, MOWED, MUSED, MUTED, NIXED, NOSED, NUKED, OARED
+OFFED, OGEED, OGLED, OILED, OOHED, OOZED, OUTED, PACED, PALED, PANED, PAWED, PIKED
+PILED, PINED, PLIED, POKED, POLED, POOED, PORED, PRIED, PUKED, PULED, PWNED, RACED
+RAGED, RAKED, RAPED, RARED, RAVED, RAZED, REDID, REWED, RICED, RILED, RIMED, RIVED
+ROBED, ROPED, ROVED, ROWED, RULED, SATED, SAWED, SEWED, SEXED, SIRED, SITED, SKIED
+SLUED, SOLED, SOWED, SPIED, SPUED, TAPED, TARED, TIDED, TINED, TOKED, TONED, TOPED
+TOTED, TOWED, TOYED, TREED, TRUED, TUBED, UMPED, UNDID, URGED, VAPED, VEXED, VISED
+VOTED, VOWED, WADED, WAKED, WALED, WAVED, WAXED, WILED, WINED, WIPED, WISED, WIVED
+WOOED, WOWED, YAWED, YOKED
+
+## Frequently asked questions
+
+### How many 5 letter words ending in d are there?
+
+There are 460 5 letter words ending in d in the WordTrove word list, which is based on the SCOWL English dictionary.
+
+### What is the highest scoring 5 letter word ending in D?
+
+FAZED is worth 18 points with standard English Scrabble tile values.
+
+### Which 5 letter words ending in d have the most vowels?
+
+AVOID, AHEAD, AIMED, AIDED, AIRED, ALOUD each contain several vowels, which makes them useful for testing letters in Wordle.
+
+## Source and method
+
+Word list: SCOWL-based Hunspell en_US dictionary (Debian release 2020.12.07, size 70). Method and limits: [How our word list works](https://wordtrove.app/how-our-word-list-works/). To filter this list by more letters, use the [5 letter word finder](https://wordtrove.app/).
